@@ -1,0 +1,134 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 19 items
+
+test_vision_language_bridge.py FFFFFFFFFFFFFFFFFFF                       [100%]
+
+=================================== FAILURES ===================================
+____________ TestFeatureExtraction.test_extract_features_from_video ____________
+test_vision_language_bridge.py:128: in test_extract_features_from_video
+    features = extract_visual_features(mock_worker2_model, mock_video)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'extract_visual_features' is not defined
+______________ TestFeatureExtraction.test_extract_features_batch _______________
+test_vision_language_bridge.py:151: in test_extract_features_batch
+    features = extract_visual_features(mock_worker2_model, videos)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'extract_visual_features' is not defined
+____________ TestFeatureExtraction.test_features_are_deterministic _____________
+test_vision_language_bridge.py:164: in test_features_are_deterministic
+    features1 = extract_visual_features(mock_worker2_model, mock_video)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'extract_visual_features' is not defined
+___________ TestLLMPromptGeneration.test_generate_description_prompt ___________
+test_vision_language_bridge.py:189: in test_generate_description_prompt
+    prompt = generate_prompt(
+             ^^^^^^^^^^^^^^^
+E   NameError: name 'generate_prompt' is not defined
+___________ TestLLMPromptGeneration.test_generate_explanation_prompt ___________
+test_vision_language_bridge.py:209: in test_generate_explanation_prompt
+    prompt = generate_prompt(
+             ^^^^^^^^^^^^^^^
+E   NameError: name 'generate_prompt' is not defined
+_______________ TestLLMPromptGeneration.test_generate_qa_prompt ________________
+test_vision_language_bridge.py:230: in test_generate_qa_prompt
+    prompt = generate_prompt(
+             ^^^^^^^^^^^^^^^
+E   NameError: name 'generate_prompt' is not defined
+________ TestLLMPromptGeneration.test_prompt_includes_features_summary _________
+test_vision_language_bridge.py:247: in test_prompt_includes_features_summary
+    prompt = generate_prompt(
+             ^^^^^^^^^^^^^^^
+E   NameError: name 'generate_prompt' is not defined
+_____________ TestVisionLanguageBridge.test_bridge_initialization ______________
+test_vision_language_bridge.py:274: in test_bridge_initialization
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+_________________ TestVisionLanguageBridge.test_describe_video _________________
+test_vision_language_bridge.py:293: in test_describe_video
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+_____________ TestVisionLanguageBridge.test_explain_classification _____________
+test_vision_language_bridge.py:315: in test_explain_classification
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+________________ TestVisionLanguageBridge.test_answer_question _________________
+test_vision_language_bridge.py:338: in test_answer_question
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+_____________ TestVisionLanguageBridge.test_multiple_llm_backends ______________
+test_vision_language_bridge.py:359: in test_multiple_llm_backends
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+___________ TestErrorHandling.test_invalid_video_shape_raises_error ____________
+test_vision_language_bridge.py:387: in test_invalid_video_shape_raises_error
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+_________ TestErrorHandling.test_missing_api_key_for_gpt4_raises_error _________
+test_vision_language_bridge.py:407: in test_missing_api_key_for_gpt4_raises_error
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+__________ TestErrorHandling.test_nonexistent_model_path_raises_error __________
+test_vision_language_bridge.py:421: in test_nonexistent_model_path_raises_error
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+______________ TestErrorHandling.test_empty_question_raises_error ______________
+test_vision_language_bridge.py:434: in test_empty_question_raises_error
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+___________ TestOutputQuality.test_description_mentions_key_elements ___________
+test_vision_language_bridge.py:460: in test_description_mentions_key_elements
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+________ TestOutputQuality.test_explanation_cites_quantitative_evidence ________
+test_vision_language_bridge.py:486: in test_explanation_cites_quantitative_evidence
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+________ TestOutputQuality.test_output_is_reproducible_with_same_input _________
+test_vision_language_bridge.py:514: in test_output_is_reproducible_with_same_input
+    bridge = VisionLanguageBridge(
+             ^^^^^^^^^^^^^^^^^^^^
+E   NameError: name 'VisionLanguageBridge' is not defined
+=============================== warnings summary ===============================
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py::TestFeatureExtraction::test_extract_features_from_video
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py::TestFeatureExtraction::test_extract_features_batch
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py::TestFeatureExtraction::test_features_are_deterministic
+  /home/ubuntu/mono_to_3d/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_vision_language_bridge.py::TestFeatureExtraction::test_extract_features_from_video
+FAILED test_vision_language_bridge.py::TestFeatureExtraction::test_extract_features_batch
+FAILED test_vision_language_bridge.py::TestFeatureExtraction::test_features_are_deterministic
+FAILED test_vision_language_bridge.py::TestLLMPromptGeneration::test_generate_description_prompt
+FAILED test_vision_language_bridge.py::TestLLMPromptGeneration::test_generate_explanation_prompt
+FAILED test_vision_language_bridge.py::TestLLMPromptGeneration::test_generate_qa_prompt
+FAILED test_vision_language_bridge.py::TestLLMPromptGeneration::test_prompt_includes_features_summary
+FAILED test_vision_language_bridge.py::TestVisionLanguageBridge::test_bridge_initialization
+FAILED test_vision_language_bridge.py::TestVisionLanguageBridge::test_describe_video
+FAILED test_vision_language_bridge.py::TestVisionLanguageBridge::test_explain_classification
+FAILED test_vision_language_bridge.py::TestVisionLanguageBridge::test_answer_question
+FAILED test_vision_language_bridge.py::TestVisionLanguageBridge::test_multiple_llm_backends
+FAILED test_vision_language_bridge.py::TestErrorHandling::test_invalid_video_shape_raises_error
+FAILED test_vision_language_bridge.py::TestErrorHandling::test_missing_api_key_for_gpt4_raises_error
+FAILED test_vision_language_bridge.py::TestErrorHandling::test_nonexistent_model_path_raises_error
+FAILED test_vision_language_bridge.py::TestErrorHandling::test_empty_question_raises_error
+FAILED test_vision_language_bridge.py::TestOutputQuality::test_description_mentions_key_elements
+FAILED test_vision_language_bridge.py::TestOutputQuality::test_explanation_cites_quantitative_evidence
+FAILED test_vision_language_bridge.py::TestOutputQuality::test_output_is_reproducible_with_same_input
+======================== 19 failed, 3 warnings in 1.65s ========================

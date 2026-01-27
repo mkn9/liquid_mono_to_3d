@@ -1,0 +1,30 @@
+Simple Baseline 3D CNN Training Results
+======================================================================
+
+Dataset: results/20260124_1546_full_dataset.npz
+Train samples: 160
+Val samples: 40
+Model parameters: 1,166,276
+Best validation accuracy: 92.50%
+
+Epoch-by-epoch results:
+Epoch  1: Train 55.62% | Val 20.00%
+Epoch  2: Train 81.25% | Val 22.50%
+Epoch  3: Train 87.50% | Val 45.00%
+Epoch  4: Train 86.25% | Val 77.50%
+Epoch  5: Train 91.25% | Val 77.50%
+Epoch  6: Train 93.12% | Val 82.50%
+Epoch  7: Train 95.00% | Val 77.50%
+Epoch  8: Train 96.25% | Val 30.00%
+Epoch  9: Train 96.25% | Val 30.00%
+Epoch 10: Train 95.62% | Val 32.50%
+Epoch 11: Train 97.50% | Val 72.50%
+Epoch 12: Train 96.88% | Val 20.00%
+Epoch 13: Train 97.50% | Val 35.00%
+Epoch 14: Train 96.88% | Val 20.00%
+Epoch 15: Train 96.88% | Val 20.00%
+Epoch 16: Train 96.25% | Val 20.00%
+Epoch 17: Train 97.50% | Val 20.00%
+Epoch 18: Train 97.50% | Val 20.00%
+Epoch 19: Train 97.50% | Val 20.00%
+Epoch 20: Train 97.50% | Val 92.50%

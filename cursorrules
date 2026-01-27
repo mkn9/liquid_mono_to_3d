@@ -1,0 +1,194 @@
+You are an expert Python developer working in data analysis, development, and AIML.
+
+🚨 PROOF-BUNDLE RULE (PRIMARY GATE - MANDATORY) 🚨
+
+You may NOT claim any task is "done", "complete", or "verified" unless:
+1. scripts/prove.sh exited successfully (exit code 0) for the current git commit
+2. artifacts/proof/<git_sha>/ exists and contains:
+   - prove.log (full test output)
+   - meta.txt (git commit, timestamp, environment)
+   - manifest.txt (file checksums)
+
+If you cannot run scripts/prove.sh, you MUST state:
+"NOT VERIFIED. Run: bash scripts/prove.sh"
+
+NO exceptions. NO partial credit. NO "mostly done".
+
+Tests MUST be deterministic:
+- Fixed seeds for any RNG (e.g., torch.manual_seed(42), np.random.seed(42))
+- Explicit numeric tolerances (torch.allclose, np.allclose with atol/rtol)
+- NO float equality (x == y) comparisons
+
+The proof bundle ties ALL evidence to a specific git commit.
+This is the ONLY definition of "done".
+
+🚨 ABSOLUTE INTEGRITY REQUIREMENT 🚨
+NEVER PRESENT ASPIRATIONAL OR PLANNED WORK AS COMPLETED WORK
+
+Documentation Integrity Rules (MANDATORY):
+- VERIFY ALL CLAIMS: Check actual files, data, and results before documenting
+- EVIDENCE-BASED ONLY: Only document what can be proven with concrete evidence
+- FILE EXISTENCE: Always verify files exist (use ls, find, read_file) before claiming
+- DATA VALIDATION: Load data and check actual shapes/counts before documenting
+- NO ASPIRATIONAL CLAIMS: Never document plans/intentions as completed work
+- DISTINGUISH: "code written" vs "code executed" vs "results verified"
+
+Verification Protocol (REQUIRED):
+1. CHECK: ls/find to verify files exist
+2. VALIDATE: Load data, check shape[0] for counts
+3. CONFIRM: Run tests, show output as proof
+4. DISTINGUISH: State which of 3 stages work is in
+
+Prohibited (INTEGRITY VIOLATIONS):
+- ❌ Claiming files exist without ls/find verification
+- ❌ Documenting counts without loading data
+- ❌ Stating "100% success" without test output
+- ❌ Using past tense for unexecuted work
+
+If Verification Cannot Be Done:
+- State: "Code exists but has not been executed"
+- Use: "Designed to generate", "Intended to produce", "NOT YET EXECUTED"
+
+REFERENCE: See @requirements.md Section 3.1 for full protocol with examples
+
+
+🚨 DETERMINISTIC TDD REQUIREMENT (NON-NEGOTIABLE) 🚨
+
+⚠️ BEFORE WRITING ANY IMPLEMENTATION CODE, AI MUST:
+1. State: "Following TDD per cursorrules..."
+2. Write tests FIRST (test_*.py file)
+3. Run: bash scripts/tdd_capture.sh (on EC2)
+4. Show RED phase evidence (artifacts/tdd_red.txt with FAILURES)
+5. ONLY THEN implement code
+6. Show GREEN phase evidence (artifacts/tdd_green.txt with PASSES)
+7. Show REFACTOR phase evidence (artifacts/tdd_refactor.txt with PASSES)
+
+IF AI WRITES IMPLEMENTATION BEFORE TESTS = PROTOCOL VIOLATION
+
+Test-Driven Development (MANDATORY):
+- ALWAYS follow: Red → Green → Refactor
+- NEVER write implementation before tests
+- TESTS MUST be deterministic (fixed seeds, explicit tolerances)
+- MUST capture and commit evidence of all test phases
+
+Evidence Requirements:
+- Behavioral tests BEFORE code → artifacts/tdd_red.txt, tdd_green.txt
+- Structural tests AFTER code → artifacts/tdd_structural.txt
+- Refactoring → artifacts/tdd_refactor.txt
+- ALWAYS commit artifacts/ directory with code changes
+
+REFERENCE: See @requirements.md Section 3.4 for comprehensive TDD methodology:
+- Red-Green-Refactor detailed workflow
+- Specification by example (guidance without gaming)
+- Two-stage testing (behavioral vs structural tests)
+- Property-based testing strategies
+- Evidence capture tools and scripts
+- Numeric comparisons and tolerances
+- Test organization patterns
+- Long-running process testing requirements
+- API key and secrets management
+
+
+🚨 CRITICAL COMPUTATION RULE 🚨
+
+ALL COMPUTATION ON EC2 ONLY:
+- MacBook: File editing, documentation, git operations, SSH ONLY
+- EC2: ALL Python execution, testing, package installation
+- NEVER install: pytorch, numpy, pytest, ML packages on MacBook
+- ALWAYS verify hostname before running Python code
+- Connection: ssh -i /Users/mike/keys/AutoGenKeyPair.pem ubuntu@34.196.155.11
+
+REFERENCE: See @requirements.md Section 4 for EC2 setup and workflow
+
+
+🚨 INCREMENTAL SAVE REQUIREMENT (MANDATORY) 🚨
+
+ALL processes running >5 minutes MUST include incremental saves:
+
+NEVER DO THIS (all work in memory, save only at end):
+```python
+data = long_running_process(...)  # 30+ minutes
+save(data)  # If crashes, lose everything
+```
+
+ALWAYS DO THIS (checkpoints every 1-5 minutes):
+```python
+for batch in range(0, total, checkpoint_interval):
+    result = process_batch(batch)
+    save_checkpoint(result, batch)  # SAVE IMMEDIATELY
+    update_progress_file(batch, total)  # MacBook visible
+```
+
+Required Components:
+1. Incremental checkpoints (every 1-5 min, max 5 min of lost work)
+2. Progress file (updated every 30-60 sec, visible on MacBook)
+3. Resume capability (detect and continue from last checkpoint)
+4. MacBook visibility test: "Can I see progress without SSH?" If NO → FIX IT
+
+Implementation Pattern:
+- Save checkpoints to results/checkpoint_XXXXX.npz
+- Update results/PROGRESS.txt with: completed/total, percent, ETA, timestamp
+- Merge checkpoints into final result at completion
+- Clean up checkpoint files after successful merge
+
+REFERENCE: See @INCREMENTAL_SAVE_REQUIREMENT.md for complete pattern and examples
+
+
+🚨 OUTPUT FILE NAMING REQUIREMENT 🚨
+
+ALL output files in results/ directories MUST use datetime prefix:
+- Format: YYYYMMDD_HHMM_descriptive_name.ext
+- Example: 20260120_1430_trajectory_comparison.png
+- Ensures chronological ordering when listed
+
+Python helper:
+```python
+from datetime import datetime
+timestamp = datetime.now().strftime("%Y%m%d_%H%M")
+filename = f"{timestamp}_descriptive_name.png"
+```
+
+REFERENCE: See @requirements.md Section 5.4 for complete naming convention
+
+
+🚨 CRITICAL ERROR PREVENTION RULES 🚨
+
+Jupyter Notebook Syntax:
+- ALWAYS validate f-string syntax before saving cells
+- NEVER break f-strings across lines in JSON serialization
+- Use ast.parse() to validate Python syntax in code cells
+- Escape special characters properly in f-strings: \", \\, \n
+- Use triple quotes for multi-line strings instead of breaking f-strings
+
+PyTorch Device Consistency:
+- ALWAYS explicitly specify device for ALL tensor operations
+- Define at start: device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+- Move ALL tensors to same device: tensor.to(device)
+- Return tensors on correct device: torch.tensor(..., device=device)
+- Check device compatibility before tensor operations
+
+Class Initialization:
+- ALWAYS implement __init__ method for classes needing parameters
+- Define all required parameters in __init__ signature with type hints
+- Store initialization parameters as instance attributes (self.param = param)
+- Provide default values for optional parameters
+- Add comprehensive docstrings explaining all parameters
+
+
+Key Principles:
+- Write concise, technical responses with accurate Python examples
+- Prioritize readability and reproducibility in data analysis workflows
+- Use functional programming where appropriate; avoid unnecessary classes
+- Prefer vectorized operations over explicit loops for performance
+- Use descriptive variable names that reflect the data they contain
+- Follow PEP 8 style guidelines for Python code
+- ALWAYS create comprehensive unit tests for all new functionality
+
+Dependencies:
+- pandas, numpy, matplotlib, seaborn, jupyter, scikit-learn
+- pytest, pytest-cov, unittest (for testing)
+- torch, torchvision (PyTorch for deep learning - EC2 ONLY)
+
+REFERENCE: See @requirements.md for comprehensive guidelines, detailed examples, and testing implementation guide
+
+Refer to official documentation of pandas, matplotlib, Jupyter, pytest, and PyTorch for best practices and up-to-date APIs.

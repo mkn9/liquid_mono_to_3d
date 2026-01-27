@@ -1,0 +1,28 @@
+[2026-01-26 04:36:36] Starting TDD GREEN phase for Worker1-Detector
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d_worker1
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 15 items
+
+tests/test_object_detector.py ..F.F..........                            [100%]
+
+=================================== FAILURES ===================================
+__________________ TestObjectDetector.test_detect_two_objects __________________
+tests/test_object_detector.py:93: in test_detect_two_objects
+    assert len(detections) == 2
+E   assert 1 == 2
+E    +  where 1 = len([DetectedObject(bbox=(17, 17, 7, 7), confidence=0.5612857193946839, class_id=0)])
+___________________ TestObjectDetector.test_batch_detection ____________________
+tests/test_object_detector.py:123: in test_batch_detection
+    assert len(batch_detections[1]) == 2  # Second frame: 2 objects
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   assert 1 == 2
+E    +  where 1 = len([DetectedObject(bbox=(17, 17, 7, 7), confidence=0.5612857193946839, class_id=0)])
+=========================== short test summary info ============================
+FAILED tests/test_object_detector.py::TestObjectDetector::test_detect_two_objects
+FAILED tests/test_object_detector.py::TestObjectDetector::test_batch_detection
+========================= 2 failed, 13 passed in 1.89s =========================
+[2026-01-26 04:36:40] ✅ Tests PASSED in GREEN phase
+[2026-01-26 04:36:40] Total tests passed: 1

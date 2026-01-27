@@ -1,0 +1,19 @@
+{
+  "accuracy": 0.888,
+  "early_stop_rate": 0.976,
+  "avg_decision_frame": 2.828,
+  "avg_compute_saved": 0.911625,
+  "avg_inference_time_ms": 9.64516019821167,
+  "total_samples": 500,
+  "correct_predictions": 444,
+  "confusion_matrix": [
+    [
+      184,
+      43
+    ],
+    [
+      13,
+      260
+    ]
+  ]
+}

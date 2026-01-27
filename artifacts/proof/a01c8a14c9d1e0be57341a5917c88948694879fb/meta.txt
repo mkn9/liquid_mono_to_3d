@@ -1,0 +1,7 @@
+timestamp_utc: 2026-01-24T05:01:24Z
+git_sha: a01c8a14c9d1e0be57341a5917c88948694879fb
+pwd: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d
+python: Python 3.13.1
+pip: pip 25.0.1 from /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/pip (python 3.13)
+pytest: pytest 8.4.2
+platform: Darwin MacBook-Pro-3 23.6.0 Darwin Kernel Version 23.6.0: Fri Jul  5 17:55:37 PDT 2024; root:xnu-10063.141.1~2/RELEASE_ARM64_T6030 arm64

@@ -1,0 +1,29 @@
+=== Test Evidence Provenance ===
+Label: validation_inference
+Timestamp: 2026-01-25 23:40:01 UTC
+Git Commit: 37ec3c6322b6f0cf9897ed56b7b3fc77bf278db4
+Git Branch: trajectory-video/branch-4-magvit
+Git Status: clean
+Python: Python 2.7.12
+pytest: pytest 8.4.2
+Working Dir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d
+Hostname: MacBook-Pro-3
+OS: Darwin 23.6.0
+Top Dependencies:
+matplotlib==3.10.1
+numpy==2.2.2
+opencv-python==4.11.0.86
+pandas==2.2.3
+pytest==8.4.2
+pytest-cov==7.0.0
+pytest-mock==3.15.0
+torch==2.6.0
+torchvision==0.21.0
+=== End Provenance ===
+
+=== Test Run: validation_inference ===
+=== Command: pytest -q ===
+
+sssss......                                                              [100%]
+
+=== exit_code: 0 ===

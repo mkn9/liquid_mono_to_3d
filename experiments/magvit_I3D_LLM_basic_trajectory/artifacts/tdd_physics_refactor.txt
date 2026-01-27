@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 23 items
+
+test_dataset_generator.py .....................F.                        [100%]
+
+=================================== FAILURES ===================================
+__________________ test_linear_trajectory_all_dimensions_vary __________________
+test_dataset_generator.py:595: in test_linear_trajectory_all_dimensions_vary
+    assert y_range > 0.1, f"Linear Y range too small: {y_range:.4f}"
+E   AssertionError: Linear Y range too small: 0.1000
+E   assert np.float64(0.1) > 0.1
+=========================== short test summary info ============================
+FAILED test_dataset_generator.py::test_linear_trajectory_all_dimensions_vary
+========================= 1 failed, 22 passed in 1.50s =========================
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 23 items
+
+test_dataset_generator.py .......................                        [100%]
+
+============================== 23 passed in 1.50s ==============================

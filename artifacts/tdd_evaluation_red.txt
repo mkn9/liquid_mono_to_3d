@@ -1,0 +1,134 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d
+configfile: pytest.ini
+plugins: cov-6.2.1, mock-3.14.1
+collected 16 items
+
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py F [  6%]
+FFFFFFFFFFFFFFF                                                          [100%]
+
+=================================== FAILURES ===================================
+______________ TestModelEvaluation.test_load_model_for_evaluation ______________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:55: in test_load_model_for_evaluation
+    model = load_model_for_evaluation(str(model_path))
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/evaluate_model.py:15: in load_model_for_evaluation
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+________________ TestModelEvaluation.test_evaluate_on_test_set _________________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:73: in test_evaluate_on_test_set
+    results = evaluate_on_test_set(model, test_samples)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/evaluate_model.py:20: in evaluate_on_test_set
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+______________ TestModelEvaluation.test_compute_confusion_matrix _______________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:85: in test_compute_confusion_matrix
+    cm = compute_confusion_matrix(y_true, y_pred)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/evaluate_model.py:25: in compute_confusion_matrix
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+_______________ TestModelEvaluation.test_save_evaluation_report ________________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:99: in test_save_evaluation_report
+    save_evaluation_report(metrics, output_file)
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/evaluate_model.py:30: in save_evaluation_report
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+_________ TestAttentionVisualization.test_extract_attention_from_model _________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:117: in test_extract_attention_from_model
+    attention_weights = extract_attention_from_model(model, video)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/visualize_attention.py:13: in extract_attention_from_model
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+__________ TestAttentionVisualization.test_generate_attention_heatmap __________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:128: in test_generate_attention_heatmap
+    generate_attention_heatmap(attention_weights, transient_frames, output_path)
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/visualize_attention.py:18: in generate_attention_heatmap
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+________ TestAttentionVisualization.test_analyze_attention_distribution ________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:137: in test_analyze_attention_distribution
+    analysis = analyze_attention_distribution(attention_weights, transient_frames)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/visualize_attention.py:23: in analyze_attention_distribution
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+___________ TestAttentionVisualization.test_save_visualization_batch ___________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:153: in test_save_visualization_batch
+    save_visualization_batch(samples, output_dir)
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/visualize_attention.py:28: in save_visualization_batch
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+_____________ TestEfficiencyAnalysis.test_load_efficiency_metrics ______________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:173: in test_load_efficiency_metrics
+    loaded = load_efficiency_metrics(metrics_file)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/analyze_efficiency.py:13: in load_efficiency_metrics
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+__________ TestEfficiencyAnalysis.test_compute_efficiency_statistics ___________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:187: in test_compute_efficiency_statistics
+    stats = compute_efficiency_statistics(metrics)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/analyze_efficiency.py:18: in compute_efficiency_statistics
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+____________ TestEfficiencyAnalysis.test_generate_efficiency_plots _____________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:201: in test_generate_efficiency_plots
+    generate_efficiency_plots(metrics, output_dir)
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/analyze_efficiency.py:23: in generate_efficiency_plots
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+_____________ TestEfficiencyAnalysis.test_create_efficiency_report _____________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:215: in test_create_efficiency_report
+    create_efficiency_report(metrics, output_file)
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/analyze_efficiency.py:28: in create_efficiency_report
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+________________ TestReportGeneration.test_collect_all_results _________________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:236: in test_collect_all_results
+    results = collect_all_results(tmp_path)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/generate_report.py:13: in collect_all_results
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+______________ TestReportGeneration.test_generate_markdown_report ______________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:250: in test_generate_markdown_report
+    generate_markdown_report(results, output_file)
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/generate_report.py:18: in generate_markdown_report
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+________________ TestReportGeneration.test_generate_html_report ________________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:265: in test_generate_html_report
+    generate_html_report(results, output_file)
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/generate_report.py:23: in generate_html_report
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+________________ TestReportGeneration.test_embed_images_in_html ________________
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py:279: in test_embed_images_in_html
+    result = embed_images_in_html(html_template, str(image_path))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/early_persistence_detection/evaluation/generate_report.py:28: in embed_images_in_html
+    raise NotImplementedError("RED phase - test should fail")
+E   NotImplementedError: RED phase - test should fail
+=========================== short test summary info ============================
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestModelEvaluation::test_load_model_for_evaluation
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestModelEvaluation::test_evaluate_on_test_set
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestModelEvaluation::test_compute_confusion_matrix
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestModelEvaluation::test_save_evaluation_report
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestAttentionVisualization::test_extract_attention_from_model
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestAttentionVisualization::test_generate_attention_heatmap
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestAttentionVisualization::test_analyze_attention_distribution
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestAttentionVisualization::test_save_visualization_batch
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestEfficiencyAnalysis::test_load_efficiency_metrics
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestEfficiencyAnalysis::test_compute_efficiency_statistics
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestEfficiencyAnalysis::test_generate_efficiency_plots
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestEfficiencyAnalysis::test_create_efficiency_report
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestReportGeneration::test_collect_all_results
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestReportGeneration::test_generate_markdown_report
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestReportGeneration::test_generate_html_report
+FAILED experiments/trajectory_video_understanding/early_persistence_detection/evaluation/tests/test_evaluation_scripts.py::TestReportGeneration::test_embed_images_in_html
+============================== 16 failed in 1.17s ==============================

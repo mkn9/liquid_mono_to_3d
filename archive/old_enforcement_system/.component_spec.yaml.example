@@ -1,0 +1,149 @@
+# Component Specification File
+# Defines requirements for claimed components to prevent fake implementations
+
+# This file should be customized for your project and renamed to .component_spec.yaml
+
+components:
+  MAGVIT:
+    type: model
+    required_imports:
+      - magvit
+      - magvit2
+      - videogpt  # Alternative acceptable implementation
+    required_classes:
+      - MAGVIT_VQ_VAE
+      - VectorQuantizer
+      - VideoEncoder
+      - VideoDecoder
+    required_functions:
+      - encode
+      - decode
+      - quantize
+    forbidden_patterns:
+      - "# fake magvit"
+      - "# simplified.*magvit"
+      - "# TODO.*implement.*magvit"
+      - "class.*SimplifiedMAGVIT"
+    min_lines_of_code: 100
+    
+  CLIP:
+    type: model
+    required_imports:
+      - clip
+      - transformers.CLIPModel
+      - open_clip
+    required_classes:
+      - CLIPModel
+      - CLIPVisionModel
+      - CLIPTextModel
+    required_functions:
+      - encode_image
+      - encode_text
+    forbidden_patterns:
+      - "# fake clip"
+      - "# simplified.*clip"
+      - "# placeholder.*clip"
+    min_lines_of_code: 50
+    
+  GPT-4:
+    type: api
+    required_imports:
+      - openai
+    required_functions:
+      - openai.ChatCompletion.create
+      - openai.chat.completions.create
+    required_classes: []
+    forbidden_patterns:
+      - "# fake.*gpt"
+      - "# template.*gpt"
+      - "def.*fake.*gpt"
+      - "# TODO.*implement.*gpt"
+    min_lines_of_code: 20
+    
+  Mistral:
+    type: model
+    required_imports:
+      - transformers.AutoModelForCausalLM
+      - mistralai
+    required_classes:
+      - MistralForCausalLM
+      - AutoModelForCausalLM
+    required_functions:
+      - generate
+      - forward
+    forbidden_patterns:
+      - "# fake.*mistral"
+      - "# template.*mistral"
+    min_lines_of_code: 30
+    
+  Phi-2:
+    type: model
+    required_imports:
+      - transformers
+    required_classes:
+      - AutoModelForCausalLM
+      - PhiForCausalLM
+    required_functions:
+      - generate
+    forbidden_patterns:
+      - "# fake.*phi"
+      - "# template.*phi"
+    min_lines_of_code: 30
+    
+  I3D:
+    type: model
+    required_imports:
+      - torchvision.models.video
+      - i3d
+      - timm
+    required_classes:
+      - I3D
+      - InceptionI3d
+    required_functions: []
+    forbidden_patterns:
+      - "# simplified.*i3d"
+      - "# fake.*i3d"
+      - "class.*SimplifiedI3D"
+    min_lines_of_code: 50
+    
+  SlowFast:
+    type: model
+    required_imports:
+      - slowfast
+      - pytorchvideo.models
+    required_classes:
+      - SlowFast
+      - create_slowfast
+    required_functions: []
+    forbidden_patterns:
+      - "# simplified.*slowfast"
+      - "# fake.*slowfast"
+      - "class.*SimplifiedSlowFast"
+    min_lines_of_code: 50
+
+# Branch specifications - maps branch names to required components
+# (This would typically be in a separate .branch_specifications.json file)
+branches:
+  "branch1/i3d-magvit-gpt4":
+    components:
+      - I3D
+      - MAGVIT
+      - GPT-4
+    
+  "branch2/slowfast-magvit-gpt4":
+    components:
+      - SlowFast
+      - MAGVIT
+      - GPT-4
+    
+  "branch3/i3d-clip-mistral":
+    components:
+      - I3D
+      - CLIP
+      - Mistral
+    
+  "branch4/slowfast-phi2":
+    components:
+      - SlowFast
+      - Phi-2
+

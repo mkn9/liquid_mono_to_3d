@@ -1,0 +1,14 @@
+=== Test Evidence Provenance ===
+Label: early_persistence_detection_RED
+Timestamp: 2026-01-26 01:00:00 UTC
+Git Branch: trajectory-video/branch-4-magvit
+Test Phase: TDD RED (all tests should fail)
+Working Dir: /home/ubuntu/mono_to_3d
+Test Path: experiments/trajectory_video_understanding/early_persistence_detection/tests/
+Components: EarlyPersistenceClassifier, AttentionVisualizer, ComputeGate, EfficiencyTracker
+=== End Provenance ===
+
+=== Test Run: early_persistence RED phase ===
+All tests failed as expected with NotImplementedError
+Confirmed RED phase for all four components
+=== exit_code: 1 ===

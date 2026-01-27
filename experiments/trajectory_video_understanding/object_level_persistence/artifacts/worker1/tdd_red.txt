@@ -1,0 +1,110 @@
+[2026-01-26 04:34:34] Starting TDD RED phase for Worker1-Detector
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d_worker1
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 15 items
+
+tests/test_object_detector.py .FFFFFFF.F.FFFF                            [100%]
+
+=================================== FAILURES ===================================
+_________________ TestObjectDetector.test_detect_single_object _________________
+tests/test_object_detector.py:72: in test_detect_single_object
+    detections = detector.detect(single_object_frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:44: in detect
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+__________________ TestObjectDetector.test_detect_two_objects __________________
+tests/test_object_detector.py:90: in test_detect_two_objects
+    detections = detector.detect(two_object_frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:44: in detect
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+__________________ TestObjectDetector.test_detect_empty_frame __________________
+tests/test_object_detector.py:109: in test_detect_empty_frame
+    detections = detector.detect(empty_frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:44: in detect
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+___________________ TestObjectDetector.test_batch_detection ____________________
+tests/test_object_detector.py:118: in test_batch_detection
+    batch_detections = detector.detect_batch(frames)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:48: in detect_batch
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_________________ TestObjectDetector.test_confidence_threshold _________________
+tests/test_object_detector.py:135: in test_confidence_threshold
+    detections = detector_high.detect(faint_frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:44: in detect
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+________________ TestObjectDetector.test_nms_removes_duplicates ________________
+tests/test_object_detector.py:156: in test_nms_removes_duplicates
+    detections = detector.detect(frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:44: in detect
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+________________ TestObjectDetector.test_detector_output_format ________________
+tests/test_object_detector.py:163: in test_detector_output_format
+    detections = detector.detect(single_object_frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:44: in detect
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_________________ TestObjectDetector.test_detect_at_boundaries _________________
+tests/test_object_detector.py:196: in test_detect_at_boundaries
+    detections = detector.detect(frame)
+                 ^^^^^^^^^^^^^^^^^^^^^^
+src/object_detector.py:44: in detect
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+________________ TestDetectedObject.test_detected_object_center ________________
+tests/test_object_detector.py:225: in test_detected_object_center
+    center = obj.center()
+             ^^^^^^^^^^^^
+src/object_detector.py:21: in center
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_________________ TestDetectedObject.test_detected_object_area _________________
+tests/test_object_detector.py:236: in test_detected_object_area
+    area = obj.area()
+           ^^^^^^^^^^
+src/object_detector.py:25: in area
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_________________ TestDetectedObject.test_detected_object_iou __________________
+tests/test_object_detector.py:244: in test_detected_object_iou
+    iou = obj1.iou(obj2)
+          ^^^^^^^^^^^^^^
+src/object_detector.py:29: in iou
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+______________ TestDetectedObject.test_detected_object_no_overlap ______________
+tests/test_object_detector.py:255: in test_detected_object_no_overlap
+    iou = obj1.iou(obj2)
+          ^^^^^^^^^^^^^^
+src/object_detector.py:29: in iou
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+=========================== short test summary info ============================
+FAILED tests/test_object_detector.py::TestObjectDetector::test_detect_single_object
+FAILED tests/test_object_detector.py::TestObjectDetector::test_detect_two_objects
+FAILED tests/test_object_detector.py::TestObjectDetector::test_detect_empty_frame
+FAILED tests/test_object_detector.py::TestObjectDetector::test_batch_detection
+FAILED tests/test_object_detector.py::TestObjectDetector::test_confidence_threshold
+FAILED tests/test_object_detector.py::TestObjectDetector::test_nms_removes_duplicates
+FAILED tests/test_object_detector.py::TestObjectDetector::test_detector_output_format
+FAILED tests/test_object_detector.py::TestObjectDetector::test_detect_at_boundaries
+FAILED tests/test_object_detector.py::TestDetectedObject::test_detected_object_center
+FAILED tests/test_object_detector.py::TestDetectedObject::test_detected_object_area
+FAILED tests/test_object_detector.py::TestDetectedObject::test_detected_object_iou
+FAILED tests/test_object_detector.py::TestDetectedObject::test_detected_object_no_overlap
+========================= 12 failed, 3 passed in 1.76s =========================
+[2026-01-26 04:34:38] ❌ ERROR: Tests passed in RED phase (should fail)!

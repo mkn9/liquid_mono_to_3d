@@ -1,0 +1,261 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 27 items
+
+test_magvit_verified.py FFFFFFFFFFFFFFFFFFFFFFFFFFF                      [100%]
+
+=================================== FAILURES ===================================
+________________ TestCameraSetup.test_camera_intrinsics_matrix _________________
+test_magvit_verified.py:39: in test_camera_intrinsics_matrix
+    from magvit_verified_generator import setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+____________________ TestCameraSetup.test_camera_positions _____________________
+test_magvit_verified.py:56: in test_camera_positions
+    from magvit_verified_generator import setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________________ TestCameraSetup.test_camera_rotation_matrices _________________
+test_magvit_verified.py:69: in test_camera_rotation_matrices
+    from magvit_verified_generator import setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+___________________ TestCameraSetup.test_translation_vectors ___________________
+test_magvit_verified.py:86: in test_translation_vectors
+    from magvit_verified_generator import setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________________ TestCameraSetup.test_projection_matrices_shape ________________
+test_magvit_verified.py:103: in test_projection_matrices_shape
+    from magvit_verified_generator import setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+____________ TestCameraSetup.test_projection_matrices_construction _____________
+test_magvit_verified.py:114: in test_projection_matrices_construction
+    from magvit_verified_generator import setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+____________________ TestCameraSetup.test_baseline_distance ____________________
+test_magvit_verified.py:131: in test_baseline_distance
+    from magvit_verified_generator import setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+_____________ TestProjection.test_project_point_in_front_of_camera _____________
+test_magvit_verified.py:146: in test_project_point_in_front_of_camera
+    from magvit_verified_generator import setup_cameras, project_point
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________ TestProjection.test_project_point_at_camera_plane_returns_inf _________
+test_magvit_verified.py:167: in test_project_point_at_camera_plane_returns_inf
+    from magvit_verified_generator import setup_cameras, project_point
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+_________ TestProjection.test_project_point_behind_camera_returns_inf __________
+test_magvit_verified.py:181: in test_project_point_behind_camera_returns_inf
+    from magvit_verified_generator import setup_cameras, project_point
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+___________ TestProjection.test_projection_homogeneous_normalization ___________
+test_magvit_verified.py:195: in test_projection_homogeneous_normalization
+    from magvit_verified_generator import setup_cameras, project_point
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+__________ TestProjection.test_projection_consistency_across_cameras ___________
+test_magvit_verified.py:213: in test_projection_consistency_across_cameras
+    from magvit_verified_generator import setup_cameras, project_point
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+______________ TestShapeOutlines.test_cube_outline_has_8_corners _______________
+test_magvit_verified.py:238: in test_cube_outline_has_8_corners
+    from magvit_verified_generator import get_cube_outline_points
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+_______ TestShapeOutlines.test_cube_corners_correct_distance_from_center _______
+test_magvit_verified.py:250: in test_cube_corners_correct_distance_from_center
+    from magvit_verified_generator import get_cube_outline_points
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________ TestShapeOutlines.test_cylinder_outline_circular_cross_section ________
+test_magvit_verified.py:267: in test_cylinder_outline_circular_cross_section
+    from magvit_verified_generator import get_cylinder_outline_points
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+____________ TestShapeOutlines.test_cone_outline_has_apex_and_base _____________
+test_magvit_verified.py:296: in test_cone_outline_has_apex_and_base
+    from magvit_verified_generator import get_cone_outline_points
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________ TestConvexHullRendering.test_render_shape_returns_valid_image _________
+test_magvit_verified.py:325: in test_render_shape_returns_valid_image
+    from magvit_verified_generator import render_shape_2d, setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________ TestConvexHullRendering.test_rendered_shape_has_nonzero_pixels ________
+test_magvit_verified.py:340: in test_rendered_shape_has_nonzero_pixels
+    from magvit_verified_generator import render_shape_2d, setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________ TestConvexHullRendering.test_out_of_bounds_shape_renders_empty ________
+test_magvit_verified.py:356: in test_out_of_bounds_shape_renders_empty
+    from magvit_verified_generator import render_shape_2d, setup_cameras
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+__________ TestTrajectoryGeneration.test_linear_trajectory_endpoints ___________
+test_magvit_verified.py:376: in test_linear_trajectory_endpoints
+    from magvit_verified_generator import generate_linear_trajectory
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+______ TestTrajectoryGeneration.test_circular_trajectory_returns_to_start ______
+test_magvit_verified.py:388: in test_circular_trajectory_returns_to_start
+    from magvit_verified_generator import generate_circular_trajectory
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+_____ TestTrajectoryGeneration.test_helical_trajectory_has_constant_radius _____
+test_magvit_verified.py:401: in test_helical_trajectory_has_constant_radius
+    from magvit_verified_generator import generate_helical_trajectory
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+_________ TestTrajectoryGeneration.test_parabolic_trajectory_has_apex __________
+test_magvit_verified.py:414: in test_parabolic_trajectory_has_apex
+    from magvit_verified_generator import generate_parabolic_trajectory
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+_______ TestDatasetGeneration.test_generate_dataset_returns_correct_keys _______
+test_magvit_verified.py:431: in test_generate_dataset_returns_correct_keys
+    from magvit_verified_generator import MAGVIT3DVerifiedGenerator
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+______________ TestDatasetGeneration.test_dataset_shapes_correct _______________
+test_magvit_verified.py:443: in test_dataset_shapes_correct
+    from magvit_verified_generator import MAGVIT3DVerifiedGenerator
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+______________ TestDatasetGeneration.test_dataset_labels_correct _______________
+test_magvit_verified.py:455: in test_dataset_labels_correct
+    from magvit_verified_generator import MAGVIT3DVerifiedGenerator
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+________ TestDatasetGeneration.test_dataset_videos_have_nonzero_pixels _________
+test_magvit_verified.py:467: in test_dataset_videos_have_nonzero_pixels
+    from magvit_verified_generator import MAGVIT3DVerifiedGenerator
+E   ModuleNotFoundError: No module named 'magvit_verified_generator'
+=============================== warnings summary ===============================
+test_magvit_verified.py:30
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:30: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.unit
+
+test_magvit_verified.py:36
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:36: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:53
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:53: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:66
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:66: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:83
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:83: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:100
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:100: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:111
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:111: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:128
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:128: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:143
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:143: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:164
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:164: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:178
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:178: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:192
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:192: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:210
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:210: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:235
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:235: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:247
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:247: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:264
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:264: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:293
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:293: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:322
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:322: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:337
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:337: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:353
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:353: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:373
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:373: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:385
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:385: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:398
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:398: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:411
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:411: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:428
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:428: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+test_magvit_verified.py:440
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:440: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+test_magvit_verified.py:452
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:452: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+test_magvit_verified.py:464
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:464: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_magvit_verified.py::TestCameraSetup::test_camera_intrinsics_matrix
+FAILED test_magvit_verified.py::TestCameraSetup::test_camera_positions - Modu...
+FAILED test_magvit_verified.py::TestCameraSetup::test_camera_rotation_matrices
+FAILED test_magvit_verified.py::TestCameraSetup::test_translation_vectors - M...
+FAILED test_magvit_verified.py::TestCameraSetup::test_projection_matrices_shape
+FAILED test_magvit_verified.py::TestCameraSetup::test_projection_matrices_construction
+FAILED test_magvit_verified.py::TestCameraSetup::test_baseline_distance - Mod...
+FAILED test_magvit_verified.py::TestProjection::test_project_point_in_front_of_camera
+FAILED test_magvit_verified.py::TestProjection::test_project_point_at_camera_plane_returns_inf
+FAILED test_magvit_verified.py::TestProjection::test_project_point_behind_camera_returns_inf
+FAILED test_magvit_verified.py::TestProjection::test_projection_homogeneous_normalization
+FAILED test_magvit_verified.py::TestProjection::test_projection_consistency_across_cameras
+FAILED test_magvit_verified.py::TestShapeOutlines::test_cube_outline_has_8_corners
+FAILED test_magvit_verified.py::TestShapeOutlines::test_cube_corners_correct_distance_from_center
+FAILED test_magvit_verified.py::TestShapeOutlines::test_cylinder_outline_circular_cross_section
+FAILED test_magvit_verified.py::TestShapeOutlines::test_cone_outline_has_apex_and_base
+FAILED test_magvit_verified.py::TestConvexHullRendering::test_render_shape_returns_valid_image
+FAILED test_magvit_verified.py::TestConvexHullRendering::test_rendered_shape_has_nonzero_pixels
+FAILED test_magvit_verified.py::TestConvexHullRendering::test_out_of_bounds_shape_renders_empty
+FAILED test_magvit_verified.py::TestTrajectoryGeneration::test_linear_trajectory_endpoints
+FAILED test_magvit_verified.py::TestTrajectoryGeneration::test_circular_trajectory_returns_to_start
+FAILED test_magvit_verified.py::TestTrajectoryGeneration::test_helical_trajectory_has_constant_radius
+FAILED test_magvit_verified.py::TestTrajectoryGeneration::test_parabolic_trajectory_has_apex
+FAILED test_magvit_verified.py::TestDatasetGeneration::test_generate_dataset_returns_correct_keys
+FAILED test_magvit_verified.py::TestDatasetGeneration::test_dataset_shapes_correct
+FAILED test_magvit_verified.py::TestDatasetGeneration::test_dataset_labels_correct
+FAILED test_magvit_verified.py::TestDatasetGeneration::test_dataset_videos_have_nonzero_pixels
+======================= 27 failed, 28 warnings in 0.12s ========================

@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d
+configfile: pytest.ini
+plugins: cov-6.2.1, mock-3.14.1
+collected 10 items
+
+tests/test_magvit_extractor.py ..........                                [100%]
+
+============================== 10 passed in 1.86s ==============================

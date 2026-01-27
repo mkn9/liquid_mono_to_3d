@@ -1,0 +1,6 @@
+Trajectory,Description,Start Position,Velocity,Speed (m/s),Radius (m),Total Distance (m),Duration (s)
+horizontal_forward,Horizontal forward motion,"(0.00, 0.00, 2.50)","(0.50, 0.00, 0.00)",0.500,0.050,2.500,5.0
+diagonal_ascending,Diagonal ascending motion,"(-1.00, -1.00, 2.00)","(0.30, 0.40, 0.20)",0.539,0.060,2.693,5.0
+vertical_drop,Vertical dropping motion,"(0.50, 1.00, 3.00)","(0.00, 0.00, -0.60)",0.600,0.040,3.000,5.0
+curved_path,Curved trajectory motion,"(-0.50, 0.00, 2.20)","(0.40, 0.30, 0.10)",0.510,0.070,2.550,5.0
+reverse_motion,Reverse direction motion,"(2.00, 1.50, 2.80)","(-0.60, -0.20, -0.10)",0.640,0.050,3.202,5.0

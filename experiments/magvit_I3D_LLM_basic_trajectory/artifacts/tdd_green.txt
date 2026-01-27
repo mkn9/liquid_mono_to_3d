@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 14 items / 1 deselected / 13 selected
+
+test_magvit_classification.py .............                              [100%]
+
+=============================== warnings summary ===============================
+../../venv/lib/python3.12/site-packages/magvit2_pytorch/magvit2_pytorch.py:126
+  /home/ubuntu/mono_to_3d/venv/lib/python3.12/site-packages/magvit2_pytorch/magvit2_pytorch.py:126: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+    @autocast(enabled = False)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+============ 13 passed, 1 deselected, 1 warning in 97.92s (0:01:37) ============

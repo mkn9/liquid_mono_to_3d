@@ -1,0 +1,42 @@
+{
+  "overall_accuracy": 1.0,
+  "per_class_accuracy": {
+    "Parabolic": {
+      "accuracy": 1.0,
+      "correct": 200,
+      "total": 200
+    }
+  },
+  "confusion_matrix": [
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      200
+    ]
+  ],
+  "position_mse": 0.12513650953769684,
+  "position_mae": 0.2401721179485321,
+  "position_rmse": 0.3537463915543123,
+  "num_samples": 200,
+  "num_correct": 200,
+  "num_incorrect": 0
+}

@@ -1,0 +1,6 @@
+{
+  "avg_attention_persistent_frames": 0.02004207670688629,
+  "avg_attention_transient_frames": 0.011207959614694118,
+  "attention_ratio_persistent_to_transient": 1.7882002592086792,
+  "interpretation": "Model pays 1.79x more attention to persistent frames"
+}

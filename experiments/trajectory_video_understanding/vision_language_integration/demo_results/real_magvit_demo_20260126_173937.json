@@ -1,0 +1,53 @@
+[
+  {
+    "sample_index": 0,
+    "file": "augmented_traj_00439.pt",
+    "ground_truth_class": "Linear",
+    "num_transients": 4,
+    "transient_frames": [
+      3,
+      4,
+      16,
+      17,
+      22,
+      23,
+      24,
+      27,
+      28,
+      29
+    ],
+    "llm_description": "In this trajectory video, we see a smooth, continuous path with no significant changes in object behavior or transient events. The persistent object, a rectangular object with a height of 16 pixels and a width of 4 pixels, appears in frames 3, 4, and 16. At frame 17, it disappears before making a return appearance at frame 18. This behavior is characteristic of a linear object, where the object's shape remains constant but its position changes over time. The transient objects, which are present at frame 16, consist of a pair of rectangular objects with a height of 4 pixels and a width of 1 pixel. These objects appear to coales"
+  },
+  {
+    "sample_index": 1,
+    "file": "augmented_traj_00576.pt",
+    "ground_truth_class": "Linear",
+    "num_transients": 6,
+    "transient_frames": [
+      5,
+      12,
+      14,
+      17,
+      18,
+      21,
+      29
+    ],
+    "llm_description": "The video shows a smooth trajectory of cars traveling down a busy street, with a persistent object in the form of a car in the center lane. The object appears to be traveling in a straight line, with no sudden movements or jerky motions. The transient events include a few cars stopping and starting, but there are no significant bumps or jolts in the flow of traffic.\n\nThe persistent object's behavior is consistent and regular, with no sudden or abrupt changes in speed or direction. The object appears to be moving in a linear trajectory, which implies that it is being driven deliberately and with purpose. The transient events are relatively minor, but they do provide insight into the traffic"
+  },
+  {
+    "sample_index": 2,
+    "file": "augmented_traj_01315.pt",
+    "ground_truth_class": "Linear",
+    "num_transients": 4,
+    "transient_frames": [
+      7,
+      14,
+      15,
+      17,
+      18,
+      19,
+      30
+    ],
+    "llm_description": "This video shows a linear trajectory with four transient objects, each with a duration of 3 frames. The first object, a red ball, appears in frame 7, and remains in the scene until frame 14. The second object, a blue ball, appears in frame 15, and remains in the scene until frame 17. The third object, a yellow ball, appears in frame 18, and disappears from the scene before frame 19. The fourth object, a green ball, appears in frame 19, and disappears from the scene before frame 21.\n\nThe persistent object behavior can be seen in that each object remains in the scene until it disappears. The"
+  }
+]

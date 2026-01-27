@@ -1,0 +1,92 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 16 items
+
+test_multi_camera_validation.py FFFFFFFFFFFFFFFF                         [100%]
+
+=================================== FAILURES ===================================
+_________________ test_validate_camera_workspace_design_exists _________________
+test_multi_camera_validation.py:15: in test_validate_camera_workspace_design_exists
+    from multi_camera_validation import validate_camera_workspace_design
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+______________ test_validate_camera_workspace_design_returns_dict ______________
+test_multi_camera_validation.py:21: in test_validate_camera_workspace_design_returns_dict
+    from multi_camera_validation import validate_camera_workspace_design
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+______________ test_validate_camera_workspace_detects_valid_setup ______________
+test_multi_camera_validation.py:45: in test_validate_camera_workspace_detects_valid_setup
+    from multi_camera_validation import validate_camera_workspace_design
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+_____________ test_validate_camera_workspace_detects_invalid_setup _____________
+test_multi_camera_validation.py:68: in test_validate_camera_workspace_detects_invalid_setup
+    from multi_camera_validation import validate_camera_workspace_design
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+_________________ test_workspace_constrained_generator_exists __________________
+test_multi_camera_validation.py:91: in test_workspace_constrained_generator_exists
+    from multi_camera_validation import WorkspaceConstrainedGenerator
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+_________________ test_workspace_generator_has_generate_method _________________
+test_multi_camera_validation.py:101: in test_workspace_generator_has_generate_method
+    from multi_camera_validation import WorkspaceConstrainedGenerator
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+___________ test_workspace_generator_produces_trajectories_in_bounds ___________
+test_multi_camera_validation.py:112: in test_workspace_generator_produces_trajectories_in_bounds
+    from multi_camera_validation import WorkspaceConstrainedGenerator
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+_______________ test_workspace_generator_supports_multiple_types _______________
+test_multi_camera_validation.py:132: in test_workspace_generator_supports_multiple_types
+    from multi_camera_validation import WorkspaceConstrainedGenerator
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+___________________ test_workspace_generator_register_custom ___________________
+test_multi_camera_validation.py:146: in test_workspace_generator_register_custom
+    from multi_camera_validation import WorkspaceConstrainedGenerator
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+__________________ test_validate_trajectory_visibility_exists __________________
+test_multi_camera_validation.py:164: in test_validate_trajectory_visibility_exists
+    from multi_camera_validation import validate_trajectory_visibility
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+____________ test_validate_trajectory_visibility_checks_all_cameras ____________
+test_multi_camera_validation.py:170: in test_validate_trajectory_visibility_checks_all_cameras
+    from multi_camera_validation import validate_trajectory_visibility
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+_____________ test_validate_trajectory_visibility_detects_clipping _____________
+test_multi_camera_validation.py:195: in test_validate_trajectory_visibility_detects_clipping
+    from multi_camera_validation import validate_trajectory_visibility
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+_____________ test_generate_validated_multi_camera_dataset_exists ______________
+test_multi_camera_validation.py:216: in test_generate_validated_multi_camera_dataset_exists
+    from multi_camera_validation import generate_validated_multi_camera_dataset
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+__________ test_generate_validated_multi_camera_dataset_returns_dict ___________
+test_multi_camera_validation.py:222: in test_generate_validated_multi_camera_dataset_returns_dict
+    from multi_camera_validation import generate_validated_multi_camera_dataset
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+_________________ test_generate_validated_dataset_correct_size _________________
+test_multi_camera_validation.py:244: in test_generate_validated_dataset_correct_size
+    from multi_camera_validation import generate_validated_multi_camera_dataset
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+______________ test_generate_validated_dataset_rejects_bad_design ______________
+test_multi_camera_validation.py:269: in test_generate_validated_dataset_rejects_bad_design
+    from multi_camera_validation import generate_validated_multi_camera_dataset
+E   ModuleNotFoundError: No module named 'multi_camera_validation'
+=========================== short test summary info ============================
+FAILED test_multi_camera_validation.py::test_validate_camera_workspace_design_exists
+FAILED test_multi_camera_validation.py::test_validate_camera_workspace_design_returns_dict
+FAILED test_multi_camera_validation.py::test_validate_camera_workspace_detects_valid_setup
+FAILED test_multi_camera_validation.py::test_validate_camera_workspace_detects_invalid_setup
+FAILED test_multi_camera_validation.py::test_workspace_constrained_generator_exists
+FAILED test_multi_camera_validation.py::test_workspace_generator_has_generate_method
+FAILED test_multi_camera_validation.py::test_workspace_generator_produces_trajectories_in_bounds
+FAILED test_multi_camera_validation.py::test_workspace_generator_supports_multiple_types
+FAILED test_multi_camera_validation.py::test_workspace_generator_register_custom
+FAILED test_multi_camera_validation.py::test_validate_trajectory_visibility_exists
+FAILED test_multi_camera_validation.py::test_validate_trajectory_visibility_checks_all_cameras
+FAILED test_multi_camera_validation.py::test_validate_trajectory_visibility_detects_clipping
+FAILED test_multi_camera_validation.py::test_generate_validated_multi_camera_dataset_exists
+FAILED test_multi_camera_validation.py::test_generate_validated_multi_camera_dataset_returns_dict
+FAILED test_multi_camera_validation.py::test_generate_validated_dataset_correct_size
+FAILED test_multi_camera_validation.py::test_generate_validated_dataset_rejects_bad_design
+============================== 16 failed in 1.49s ==============================

@@ -1,0 +1,32 @@
+=== Test Evidence Provenance ===
+Label: persistence_augmented_dataset_RED
+Timestamp: 2026-01-26 00:00:00 UTC
+Git Branch: trajectory-video/branch-4-magvit  
+Test Phase: TDD RED (all tests should fail)
+Working Dir: /home/ubuntu/mono_to_3d
+Test Path: experiments/trajectory_video_understanding/persistence_augmented_dataset/tests/
+=== End Provenance ===
+
+=== Test Run: persistence RED phase ===
+All tests failed as expected with NotImplementedError
+=== exit_code: 1 ===
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 9 items
+
+experiments/trajectory_video_understanding/persistence_augmented_dataset/tests/test_transient_generator.py F
+
+=================================== FAILURES ===================================
+____________________ TestTransientSphereGenerator.test_init ____________________
+experiments/trajectory_video_understanding/persistence_augmented_dataset/tests/test_transient_generator.py:30: in test_init
+    gen = TransientSphereGenerator(
+experiments/trajectory_video_understanding/persistence_augmented_dataset/generate_transient_dataset.py:33: in __init__
+    raise NotImplementedError("TDD RED phase - implement in GREEN phase")
+E   NotImplementedError: TDD RED phase - implement in GREEN phase
+=========================== short test summary info ============================
+FAILED experiments/trajectory_video_understanding/persistence_augmented_dataset/tests/test_transient_generator.py::TestTransientSphereGenerator::test_init
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+============================== 1 failed in 1.61s ===============================

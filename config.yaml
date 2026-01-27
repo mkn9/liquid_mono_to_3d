@@ -1,0 +1,204 @@
+# Git Tree and Project Configuration
+# This file defines git branches, tasks, and execution procedures
+
+# Project metadata
+project:
+  name: "mono_to_3d"
+  root_dir: "."
+  ec2_host: "ubuntu@34.196.155.11"
+  ec2_key: "/Users/mike/keys/AutoGenKeyPair.pem"
+  ec2_path: "~/mono_to_3d"
+
+# Git branch management
+git:
+  default_branch: "master"  # Detected: master is the default branch
+  branch_prefix: "magvit"  # Prefix for all feature branches
+  
+  # Branch naming convention
+  naming:
+    pattern: "{prefix}/{task_name}"  # e.g., "magvit/option1_direct_extraction"
+    separator: "/"
+  
+  # Branch operations
+  operations:
+    create_if_not_exists: true
+    checkout_after_create: false
+    return_to_default: true
+
+# Task definitions for parallel execution
+tasks:
+  # Option 1: Direct Feature Extraction
+  option1_direct_extraction:
+    branch: "magvit-option1-direct-extraction"
+    script: "magvit_options/option1_direct_extraction.py"
+    output_dir: "magvit_options/output"
+    description: "Extract MagVit features directly from trajectory videos"
+    dependencies: []
+    parallel: true
+    priority: 1
+    
+  # Option 2: Fine-tuning with AirSim/Unreal Engine Data
+  option2_finetuning_airsim:
+    branch: "magvit-option2-finetuning-airsim"
+    script: "magvit_options/option2_finetuning_airsim.py"
+    output_dir: "magvit_options/output"
+    description: "Fine-tune MagVit on trajectory videos with AirSim/Unreal Engine data collection"
+    dependencies: ["option1_direct_extraction"]
+    parallel: true
+    priority: 2
+    
+  # Option 7: Feature Fusion
+  option7_feature_fusion:
+    branch: "magvit-option7-feature-fusion"
+    script: "magvit_options/option7_feature_fusion.py"
+    output_dir: "magvit_options/output"
+    description: "Fuse MagVit and statistical features"
+    dependencies: ["option1_direct_extraction"]
+    parallel: true
+    priority: 3
+    
+  # Task 1: Trajectory Generator
+  task1_trajectory_generator:
+    branch: "magvit-task1-trajectory-generator"
+    script: "magvit_options/task1_trajectory_generator.py"
+    output_dir: "magvit_options/output"
+    description: "Generate synthetic trajectory videos"
+    dependencies: []
+    parallel: true
+    priority: 1
+    
+  # Task 2: Video Dataset
+  task2_video_dataset:
+    branch: "magvit-task2-video-dataset"
+    script: "magvit_options/task2_video_dataset.py"
+    output_dir: "magvit_options/output"
+    description: "Convert trajectories to video dataset"
+    dependencies: []
+    parallel: true
+    priority: 1
+    
+  # Task 3: Architecture Design
+  task3_architecture_design:
+    branch: "magvit-task3-architecture-design"
+    script: "magvit_options/task3_architecture_design.py"
+    output_dir: "magvit_options/output"
+    description: "Design multi-task architecture"
+    dependencies: []
+    parallel: true
+    priority: 1
+    
+  # Clutter and Transient Objects
+  clutter_transient_objects:
+    branch: "clutter-transient-objects"
+    script: "experiments/clutter_transient_objects/task_clutter_integration.py"
+    output_dir: "experiments/clutter_transient_objects/output"
+    description: "Test enhanced trajectory_to_video with persistent/transient objects and integrate into task1"
+    dependencies: []
+    parallel: true
+    priority: 1
+    
+  # VideoGPT 3D Implementation
+  videogpt_3d_implementation:
+    branch: "videogpt-3d-implementation"
+    script: "experiments/videogpt-3d-implementation/task_videogpt_3d.py"
+    output_dir: "experiments/videogpt-3d-implementation/output"
+    description: "Create VideoGPT 3D implementation based on 2D version"
+    dependencies: []
+    parallel: true
+    priority: 1
+    
+  # MagVit Pre-trained Models
+  magvit_pretrained_models:
+    branch: "magvit-pretrained-models"
+    script: "experiments/magvit-pretrained-models/task_magvit_pretrained.py"
+    output_dir: "experiments/magvit-pretrained-models/output"
+    description: "Test PyTorch pre-trained models, check Google Research weights, compare with random initialization"
+    dependencies: []
+    parallel: true
+    priority: 1
+
+# Execution configuration
+execution:
+  # Where to run tasks
+  location: "ec2"  # "ec2" or "local"
+  
+  # EC2 configuration
+  ec2:
+    python_env: "venv/bin/activate"
+    working_dir: "~/mono_to_3d"
+    max_parallel: 5
+    gpu_required: true
+    
+  # Local configuration
+  local:
+    python_env: "venv/bin/activate"
+    working_dir: "."
+    max_parallel: 3
+    
+  # Execution options
+  options:
+    run_tests_first: true
+    transfer_results: true
+    monitor_progress: true
+    save_intermediate: true
+
+# Output file naming
+output:
+  naming_pattern: "YYYYMMDD_HHMMSS_{task_name}_{descriptor}.{ext}"
+  directory: "magvit_options/output"
+  transfer_to_macbook: true
+  macbook_path: "magvit_options/output"
+
+# Monitoring and transfer
+monitoring:
+  check_interval: 60  # seconds
+  transfer_interval: 300  # seconds (5 minutes)
+  show_progress: true
+  log_level: "INFO"
+
+# Testing configuration
+testing:
+  run_before_execution: true
+  test_files:
+    - "magvit_options/test_parallel_tasks.py"
+    - "magvit_options/test_pytorch_magvit_integration.py"
+    - "magvit_options/test_fused_features_training.py"
+  stop_on_failure: false
+
+# Git workflow procedures
+workflow:
+  # Branch creation
+  create_branches:
+    enabled: true
+    from_branch: "main"
+    checkout_after_create: false
+    
+  # Branch switching
+  switch_branch:
+    stash_changes: true
+    pull_latest: true
+    
+  # Branch merging
+  merge:
+    strategy: "no-ff"  # "no-ff", "ff-only", "squash"
+    delete_after_merge: false
+    
+  # Commit and push
+  commit:
+    message_template: "[{task_name}] {description}"
+    push_after_commit: true
+    push_remote: "origin"
+
+# Cleanup procedures
+cleanup:
+  # After task completion
+  after_completion:
+    stash_changes: false
+    return_to_default_branch: true
+    keep_branch: true
+    
+  # Before new task
+  before_new_task:
+    clean_untracked: false
+    reset_hard: false
+

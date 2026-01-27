@@ -1,0 +1,82 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 14 items
+
+test_auto_camera_framing.py FFFFFFFFFFFFFF                               [100%]
+
+=================================== FAILURES ===================================
+______________________ test_compute_camera_params_exists _______________________
+test_auto_camera_framing.py:20: in test_compute_camera_params_exists
+    from auto_camera_framing import compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+_______________ test_compute_camera_params_returns_camera_params _______________
+test_auto_camera_framing.py:26: in test_compute_camera_params_returns_camera_params
+    from auto_camera_framing import compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+__________________ test_compute_camera_params_position_shape ___________________
+test_auto_camera_framing.py:40: in test_compute_camera_params_position_shape
+    from auto_camera_framing import compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+_______________ test_compute_camera_params_focal_length_positive _______________
+test_auto_camera_framing.py:51: in test_compute_camera_params_focal_length_positive
+    from auto_camera_framing import compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+_______________ test_compute_camera_params_centers_on_trajectory _______________
+test_auto_camera_framing.py:62: in test_compute_camera_params_centers_on_trajectory
+    from auto_camera_framing import compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+__________________ test_compute_camera_params_coverage_ratio ___________________
+test_auto_camera_framing.py:78: in test_compute_camera_params_coverage_ratio
+    from auto_camera_framing import compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+_____________________ test_validate_camera_framing_exists ______________________
+test_auto_camera_framing.py:91: in test_validate_camera_framing_exists
+    from auto_camera_framing import validate_camera_framing
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+__________________ test_validate_camera_framing_returns_dict ___________________
+test_auto_camera_framing.py:97: in test_validate_camera_framing_returns_dict
+    from auto_camera_framing import validate_camera_framing, compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+______________ test_validate_camera_framing_detects_good_framing _______________
+test_auto_camera_framing.py:113: in test_validate_camera_framing_detects_good_framing
+    from auto_camera_framing import validate_camera_framing, compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+______________ test_validate_camera_framing_detects_poor_framing _______________
+test_auto_camera_framing.py:126: in test_validate_camera_framing_detects_poor_framing
+    from auto_camera_framing import validate_camera_framing
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+______________________ test_augment_camera_params_exists _______________________
+test_auto_camera_framing.py:146: in test_augment_camera_params_exists
+    from auto_camera_framing import augment_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+_______________ test_augment_camera_params_returns_camera_params _______________
+test_auto_camera_framing.py:152: in test_augment_camera_params_returns_camera_params
+    from auto_camera_framing import augment_camera_params, compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+_________________ test_augment_camera_params_stays_reasonable __________________
+test_auto_camera_framing.py:167: in test_augment_camera_params_stays_reasonable
+    from auto_camera_framing import augment_camera_params, compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+_______________ test_different_trajectories_get_different_params _______________
+test_auto_camera_framing.py:184: in test_different_trajectories_get_different_params
+    from auto_camera_framing import compute_camera_params
+E   ModuleNotFoundError: No module named 'auto_camera_framing'
+=========================== short test summary info ============================
+FAILED test_auto_camera_framing.py::test_compute_camera_params_exists - Modul...
+FAILED test_auto_camera_framing.py::test_compute_camera_params_returns_camera_params
+FAILED test_auto_camera_framing.py::test_compute_camera_params_position_shape
+FAILED test_auto_camera_framing.py::test_compute_camera_params_focal_length_positive
+FAILED test_auto_camera_framing.py::test_compute_camera_params_centers_on_trajectory
+FAILED test_auto_camera_framing.py::test_compute_camera_params_coverage_ratio
+FAILED test_auto_camera_framing.py::test_validate_camera_framing_exists - Mod...
+FAILED test_auto_camera_framing.py::test_validate_camera_framing_returns_dict
+FAILED test_auto_camera_framing.py::test_validate_camera_framing_detects_good_framing
+FAILED test_auto_camera_framing.py::test_validate_camera_framing_detects_poor_framing
+FAILED test_auto_camera_framing.py::test_augment_camera_params_exists - Modul...
+FAILED test_auto_camera_framing.py::test_augment_camera_params_returns_camera_params
+FAILED test_auto_camera_framing.py::test_augment_camera_params_stays_reasonable
+FAILED test_auto_camera_framing.py::test_different_trajectories_get_different_params
+============================== 14 failed in 1.48s ==============================

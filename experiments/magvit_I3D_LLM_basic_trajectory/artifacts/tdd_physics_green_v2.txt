@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 6 items
+
+test_dataset_generator.py ......                                         [100%]
+
+============================== 6 passed in 1.37s ===============================

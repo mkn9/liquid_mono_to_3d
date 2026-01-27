@@ -1,0 +1,24 @@
+# Contract for Branch: exp/honest-simplified-baseline
+# This branch uses simplified models and is HONEST about it
+
+name: "honest_simplified_baseline"
+
+description: "Simplified 3D CNN baseline with template-based outputs (no MAGVIT/CLIP/real LLM)"
+
+# Required: Tests must pass
+tests:
+  - name: "foundation_tests"
+    cmd: "pytest experiments/magvit_I3D_LLM_basic_trajectory/test_trajectory_renderer.py -q"
+  - name: "dataset_tests"
+    cmd: "pytest experiments/magvit_I3D_LLM_basic_trajectory/test_dataset_generator.py -q"
+  - name: "metrics_tests"
+    cmd: "pytest experiments/magvit_I3D_LLM_basic_trajectory/test_evaluation_metrics.py -q"
+  - name: "baseline_model_tests"
+    cmd: "pytest experiments/magvit_I3D_LLM_basic_trajectory/test_simple_baseline.py -q"
+
+# Evidence files that should exist
+evidence:
+  - "experiments/magvit_I3D_LLM_basic_trajectory/artifacts/tdd_red.txt"
+  - "experiments/magvit_I3D_LLM_basic_trajectory/artifacts/tdd_green.txt"
+  - "experiments/magvit_I3D_LLM_basic_trajectory/artifacts/tdd_refactor.txt"
+

@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-07-13 18:35:11",
+  "total_experiments": 3,
+  "experiments": {
+    "magvit-2d": {
+      "description": "MAGVIT 2D trajectory prediction (squares, circles, triangles)",
+      "branch": "experiment/magvit-2d-trajectories",
+      "dependencies": [
+        "jax",
+        "flax",
+        "tensorflow"
+      ],
+      "gpu_memory": "8GB",
+      "status": "configured"
+    },
+    "videogpt-2d": {
+      "description": "VideoGPT 2D trajectory prediction (squares, circles, triangles)",
+      "branch": "experiment/videogpt-2d-trajectories",
+      "dependencies": [
+        "torch",
+        "pytorch-lightning",
+        "transformers"
+      ],
+      "gpu_memory": "10GB",
+      "status": "configured"
+    },
+    "magvit-3d": {
+      "description": "MAGVIT 3D trajectory prediction (cubes, cylinders, cones)",
+      "branch": "experiment/magvit-3d-trajectories",
+      "dependencies": [
+        "jax",
+        "flax",
+        "open3d",
+        "trimesh"
+      ],
+      "gpu_memory": "12GB",
+      "status": "configured"
+    }
+  }
+}

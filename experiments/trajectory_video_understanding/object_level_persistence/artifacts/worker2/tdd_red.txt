@@ -1,0 +1,98 @@
+[2026-01-26 04:34:34] Starting TDD RED phase for Worker2-Tokenizer
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d_worker2
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 14 items
+
+tests/test_object_tokenizer.py .FFFFFFFFFFF..                            [100%]
+
+=================================== FAILURES ===================================
+________________ TestObjectTokenizer.test_extract_object_patch _________________
+tests/test_object_tokenizer.py:76: in test_extract_object_patch
+    patch = tokenizer.extract_patch(sample_frame, sample_detected_object)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_tokenizer.py:38: in extract_patch
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+______________ TestObjectTokenizer.test_encode_patch_to_features _______________
+tests/test_object_tokenizer.py:86: in test_encode_patch_to_features
+    patch = tokenizer.extract_patch(sample_frame, sample_detected_object)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_tokenizer.py:38: in extract_patch
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_________________ TestObjectTokenizer.test_create_object_token _________________
+tests/test_object_tokenizer.py:97: in test_create_object_token
+    token = tokenizer.create_token(
+src/object_tokenizer.py:51: in create_token
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_______________ TestObjectTokenizer.test_add_positional_encoding _______________
+tests/test_object_tokenizer.py:119: in test_add_positional_encoding
+    encoded = tokenizer.add_positional_encoding(features, frame_idx)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_tokenizer.py:46: in add_positional_encoding
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+___________ TestObjectTokenizer.test_positional_encoding_uniqueness ____________
+tests/test_object_tokenizer.py:131: in test_positional_encoding_uniqueness
+    encoded_0 = tokenizer.add_positional_encoding(features, frame_idx=0)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_tokenizer.py:46: in add_positional_encoding
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+________________ TestObjectTokenizer.test_tokenize_single_frame ________________
+tests/test_object_tokenizer.py:145: in test_tokenize_single_frame
+    tokens = tokenizer.tokenize_frame(
+src/object_tokenizer.py:56: in tokenize_frame
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_______________ TestObjectTokenizer.test_tokenize_video_sequence _______________
+tests/test_object_tokenizer.py:171: in test_tokenize_video_sequence
+    token_sequence = tokenizer.tokenize_video(
+src/object_tokenizer.py:61: in tokenize_video
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+______________ TestObjectTokenizer.test_tokenize_multiple_tracks _______________
+tests/test_object_tokenizer.py:199: in test_tokenize_multiple_tracks
+    tokens = tokenizer.tokenize_frame(
+src/object_tokenizer.py:56: in tokenize_frame
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_______________ TestObjectTokenizer.test_create_sequence_tensor ________________
+tests/test_object_tokenizer.py:227: in test_create_sequence_tensor
+    sequence_tensor = tokenizer.tokens_to_tensor(tokens)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_tokenizer.py:65: in tokens_to_tensor
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_______________ TestObjectTokenizer.test_padding_short_sequences _______________
+tests/test_object_tokenizer.py:246: in test_padding_short_sequences
+    sequence_tensor, mask = tokenizer.tokens_to_tensor_padded(tokens)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_tokenizer.py:69: in tokens_to_tensor_padded
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+_______________ TestObjectTokenizer.test_truncate_long_sequences _______________
+tests/test_object_tokenizer.py:268: in test_truncate_long_sequences
+    sequence_tensor = tokenizer.tokens_to_tensor(tokens)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/object_tokenizer.py:65: in tokens_to_tensor
+    raise NotImplementedError("TDD RED phase")
+E   NotImplementedError: TDD RED phase
+=========================== short test summary info ============================
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_extract_object_patch
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_encode_patch_to_features
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_create_object_token
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_add_positional_encoding
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_positional_encoding_uniqueness
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_tokenize_single_frame
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_tokenize_video_sequence
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_tokenize_multiple_tracks
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_create_sequence_tensor
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_padding_short_sequences
+FAILED tests/test_object_tokenizer.py::TestObjectTokenizer::test_truncate_long_sequences
+========================= 11 failed, 3 passed in 1.51s =========================
+[2026-01-26 04:34:37] ❌ ERROR: Tests passed in RED phase (should fail)!

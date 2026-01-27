@@ -1,0 +1,37 @@
+Training Results Live Summary
+Generated: 2026-01-25 15:47:48
+Sync Count: 14
+
+====================================
+PROCESS STATUS
+====================================
+
+
+====================================
+LOG FILE SIZES (Progress Indicator)
+====================================
+
+
+====================================
+CHECKPOINT COUNTS
+====================================
+⏳ i3d: No checkpoints yet
+⏳ slowfast: No checkpoints yet
+⏳ transformer: No checkpoints yet
+⏳ magvit: No checkpoints yet
+
+====================================
+LATEST LOG ACTIVITY (last 5 lines each)
+====================================
+
+--- i3d ---
+(No log data)
+
+--- slowfast ---
+(No log data)
+
+--- transformer ---
+(No log data)
+
+--- magvit ---
+(No log data)

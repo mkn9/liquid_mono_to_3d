@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 7 items
+
+test_output_utils_shared.py FFFFFFF                                      [100%]
+
+=================================== FAILURES ===================================
+_____________________ test_get_timestamped_filename_format _____________________
+test_output_utils_shared.py:45: in test_get_timestamped_filename_format
+    from output_utils_shared import get_timestamped_filename
+E   ModuleNotFoundError: No module named 'output_utils_shared'
+_____________________ test_get_timestamped_filename_unique _____________________
+test_output_utils_shared.py:67: in test_get_timestamped_filename_unique
+    from output_utils_shared import get_timestamped_filename
+E   ModuleNotFoundError: No module named 'output_utils_shared'
+___________________ test_get_results_path_creates_directory ____________________
+test_output_utils_shared.py:86: in test_get_results_path_creates_directory
+    from output_utils_shared import get_results_path
+E   ModuleNotFoundError: No module named 'output_utils_shared'
+_____________________ test_get_timestamped_filename_golden _____________________
+test_output_utils_shared.py:116: in test_get_timestamped_filename_golden
+    from output_utils_shared import get_timestamped_filename
+E   ModuleNotFoundError: No module named 'output_utils_shared'
+__________________ test_save_figure_creates_timestamped_file ___________________
+test_output_utils_shared.py:139: in test_save_figure_creates_timestamped_file
+    from output_utils_shared import save_figure
+E   ModuleNotFoundError: No module named 'output_utils_shared'
+______________________________ test_save_data_csv ______________________________
+test_output_utils_shared.py:174: in test_save_data_csv
+    from output_utils_shared import save_data
+E   ModuleNotFoundError: No module named 'output_utils_shared'
+___________________________ test_multiple_file_types ___________________________
+test_output_utils_shared.py:205: in test_multiple_file_types
+    from output_utils_shared import save_data
+E   ModuleNotFoundError: No module named 'output_utils_shared'
+=========================== short test summary info ============================
+FAILED test_output_utils_shared.py::test_get_timestamped_filename_format - Mo...
+FAILED test_output_utils_shared.py::test_get_timestamped_filename_unique - Mo...
+FAILED test_output_utils_shared.py::test_get_results_path_creates_directory
+FAILED test_output_utils_shared.py::test_get_timestamped_filename_golden - Mo...
+FAILED test_output_utils_shared.py::test_save_figure_creates_timestamped_file
+FAILED test_output_utils_shared.py::test_save_data_csv - ModuleNotFoundError:...
+FAILED test_output_utils_shared.py::test_multiple_file_types - ModuleNotFound...
+============================== 7 failed in 0.12s ===============================

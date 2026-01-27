@@ -1,0 +1,33 @@
+DETAILED ANALYSIS OF VISUALIZED SAMPLES
+====================================================================================================
+
+CORRECT PREDICTIONS (10 samples)
+====================================================================================================
+ID     Trajectory   True         Predicted    Confidence   Transient %    
+----------------------------------------------------------------------------------------------------
+6252   Helical      Transient    Transient      97.6%        28.1%
+4684   Circular     Persistent   Persistent     96.3%         9.4%
+1731   Linear       Transient    Transient      97.4%        21.9%
+4742   Circular     Persistent   Persistent     98.8%         6.2%
+4521   Circular     Persistent   Persistent     97.0%        18.8%
+6340   Helical      Persistent   Persistent     66.8%        15.6%
+576    Linear       Transient    Transient      98.5%        21.9%
+5202   Helical      Persistent   Persistent     72.6%        15.6%
+6363   Helical      Transient    Transient      97.8%        31.2%
+439    Linear       Transient    Transient      99.0%        31.2%
+
+====================================================================================================
+INCORRECT PREDICTIONS (10 samples)
+====================================================================================================
+ID     Trajectory   True         Predicted    Confidence   Transient %    
+----------------------------------------------------------------------------------------------------
+3999   Circular     Persistent   Transient      50.1%        18.8%
+4640   Circular     Transient    Persistent     52.4%        21.9%
+6590   Helical      Persistent   Transient      64.5%        18.8%
+4819   Circular     Transient    Persistent     96.5%        21.9%
+9655   Parabolic    Transient    Persistent     92.5%        21.9%
+1315   Linear       Transient    Persistent     76.3%        21.9%
+8575   Parabolic    Persistent   Transient      80.5%        18.8%
+4903   Circular     Persistent   Transient      87.2%        18.8%
+5527   Helical      Transient    Persistent     52.9%        21.9%
+6743   Helical      Transient    Persistent     61.2%        31.2%

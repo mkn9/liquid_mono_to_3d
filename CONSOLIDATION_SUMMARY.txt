@@ -1,0 +1,204 @@
+================================================================================
+DOCUMENTATION CONSOLIDATION - COMPLETE
+================================================================================
+
+Date: January 20, 2026
+Status: ✅ ALL TASKS COMPLETED
+
+================================================================================
+OBJECTIVE
+================================================================================
+
+Consolidate scattered instructions and procedures into requirements.md as the
+single source of truth for all project procedures and requirements.
+
+================================================================================
+ACTIONS TAKEN
+================================================================================
+
+1. ✅ EXPANDED Section 3.4 (Chat History Protocol)
+   - Integrated all content from CHAT_HISTORY_PROCEDURES.md
+   - Added Session Summary Template
+   - Added comprehensive FAQ section
+   - All workflows now in one place
+
+2. ✅ ADDED Section 4.9 (EC2 Shutdown and Restart Procedures)
+   - Integrated all content from EC2_SHUTDOWN_PREPARATION.md
+   - Shutdown preparation checklist
+   - Safe shutdown procedure
+   - Complete restart procedure
+   - Critical reminders (IP address changes)
+   - Emergency recovery procedures
+   - EC2 instance details reference
+
+3. ✅ DELETED Redundant Files
+   - CHAT_HISTORY_PROCEDURES.md (685 lines → integrated)
+   - CHAT_HISTORY_QUICKSTART.md (quick reference → integrated)
+   - EC2_SHUTDOWN_PREPARATION.md (168 lines → integrated)
+
+4. ✅ UPDATED References
+   - README.md → points to requirements.md only
+   - docs/chat_history/README.md → updated references
+   - docs/CHAT_HISTORY_IMPLEMENTATION_SUMMARY.md → updated all mentions
+
+================================================================================
+REQUIREMENTS.MD STRUCTURE (UPDATED)
+================================================================================
+
+1. Project Overview
+2. Functional Requirements
+3. Governance & Integrity Standards
+   3.1 Documentation Integrity Protocol
+   3.2 Scientific Integrity Protocol
+   3.3 Testing Standards (TDD)
+   3.4 Chat History Protocol ← EXPANDED
+       - Core Principles
+       - Mandatory Requirements
+       - Hybrid Format Approach
+       - Dual Naming Convention
+       - Standard Workflow (3 methods)
+       - Directory Structure
+       - Content Standards
+       - Security Checklist
+       - Standard Tags
+       - Integration with Documentation Integrity
+       - Enforcement
+       - Searching Chat History
+       - Listing Conversations
+       - Exporting to Markdown
+       - Daily Workflow
+       - Weekly Maintenance
+       - Session Summary Template ← NEW
+       - FAQ ← NEW
+4. Development Environment & Setup
+   4.1 EC2 Computation Rule (MANDATORY)
+   4.2 EC2 Connection
+   4.3 Environment Verification
+   4.4 Development Workflow
+   4.5 Package Installation
+   4.6 Jupyter Lab Setup on EC2
+   4.7 Emergency Cleanup
+   4.8 Verification Checklist
+   4.9 EC2 Shutdown and Restart Procedures ← NEW
+       - Shutdown Preparation
+       - Safe Shutdown
+       - Restart Procedure
+       - Critical Reminders After Restart
+       - Emergency Recovery
+       - EC2 Instance Details
+5. Technical Requirements
+6. Testing Implementation Guide
+
+================================================================================
+BENEFITS
+================================================================================
+
+✅ Single Source of Truth
+   - requirements.md is now comprehensive
+   - No confusion about which document is authoritative
+   - All procedures in one place
+
+✅ Reduced Maintenance
+   - Update one file instead of three
+   - No risk of procedures getting out of sync
+   - Easier to keep documentation current
+
+✅ Better Organization
+   - Clear section hierarchy
+   - All chat history in Section 3.4
+   - All EC2 operations in Section 4
+   - Logical flow and grouping
+
+✅ Easier Discovery
+   - Developers know where to look
+   - Table of contents shows all topics
+   - No scattered documentation
+
+================================================================================
+WHAT REMAINS SEPARATE (AND WHY)
+================================================================================
+
+These files are intentionally kept separate:
+
+1. ✅ Experiment-Specific Documentation
+   - experiments/magvit-3d-trajectories/*.md
+   - neural_video_experiments/README.md
+   Reason: Specific to individual experiments
+
+2. ✅ Third-Party Documentation
+   - D-NeRF/README.md
+   Reason: External framework documentation
+
+3. ✅ Analysis Results
+   - SENSOR_IMPACT_ANALYSIS.md
+   Reason: Research results, not procedures
+
+4. ✅ Historical Context
+   - EVIDENCE_BASED_TDD_IMPLEMENTATION.md
+   Reason: Implementation history and rationale
+
+5. ✅ Implementation Summaries
+   - docs/CHAT_HISTORY_IMPLEMENTATION_SUMMARY.md
+   - IMPLEMENTATION_SUMMARY.txt
+   Reason: Summary documents, not core requirements
+
+6. ✅ Helper Tool Documentation
+   - scripts/README.md
+   Reason: Script-specific usage (still referenced in requirements.md)
+
+7. ✅ Coordinate System Documentation
+   - COORDINATE_SYSTEM_DOCUMENTATION.md
+   Reason: Could be integrated, but detailed enough to stand alone
+
+================================================================================
+VERIFICATION
+================================================================================
+
+Confirmed changes:
+
+✅ requirements.md Section 3.4 expanded (now comprehensive)
+✅ requirements.md Section 4.9 added (EC2 operations)
+✅ CHAT_HISTORY_PROCEDURES.md deleted
+✅ CHAT_HISTORY_QUICKSTART.md deleted
+✅ EC2_SHUTDOWN_PREPARATION.md deleted
+✅ README.md updated (references removed)
+✅ docs/chat_history/README.md updated
+✅ docs/CHAT_HISTORY_IMPLEMENTATION_SUMMARY.md updated
+
+================================================================================
+NEXT STEPS FOR USERS
+================================================================================
+
+1. Review the updated requirements.md
+   - Section 3.4 for all chat history procedures
+   - Section 4.9 for EC2 shutdown/restart procedures
+
+2. Update any personal notes or bookmarks
+   - Point to requirements.md instead of deleted files
+
+3. When looking for procedures:
+   - First check: requirements.md
+   - Table of contents shows all sections
+   - Use Cmd+F / Ctrl+F to search within file
+
+4. Commit the changes:
+   git add .
+   git commit -m "docs: consolidate procedures into requirements.md"
+   git push
+
+================================================================================
+SINGLE SOURCE OF TRUTH ACHIEVED ✅
+================================================================================
+
+requirements.md is now the comprehensive, authoritative source for:
+- All governance standards
+- All development procedures
+- All workflow instructions
+- All environment setup
+- All testing standards
+
+**Status: Documentation consolidation complete**
+**Location: requirements.md**
+
+================================================================================
+

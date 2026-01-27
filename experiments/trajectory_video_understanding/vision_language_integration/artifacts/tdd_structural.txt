@@ -1,0 +1,16 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 25 items
+
+test_vision_language_bridge_structural.py .........................      [100%]
+
+=============================== warnings summary ===============================
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge_structural.py: 16 warnings
+  /home/ubuntu/mono_to_3d/experiments/trajectory_video_understanding/vision_language_integration/vision_language_bridge.py:234: UserWarning: LLM initialization failed: openai package required: pip install openai. Using MockLLM for testing.
+    warnings.warn(f"LLM initialization failed: {e}. Using MockLLM for testing.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 25 passed, 16 warnings in 2.66s ========================

@@ -1,0 +1,4 @@
+[2026-01-26 05:16:48] Starting fast attention validation
+[2026-01-26 05:17:47] Training complete
+[2026-01-26 05:18:10] Visualization complete
+[2026-01-26 05:18:10] Pipeline complete

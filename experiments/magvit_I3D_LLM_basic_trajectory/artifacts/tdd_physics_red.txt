@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 4 items
+
+test_dataset_generator.py FF..                                           [100%]
+
+=================================== FAILURES ===================================
+___________________ test_circular_trajectory_has_constant_z ____________________
+test_dataset_generator.py:530: in test_circular_trajectory_has_constant_z
+    assert z_std < 0.01, f"Circular trajectory Z should be constant, but std={z_std:.6f}"
+E   AssertionError: Circular trajectory Z should be constant, but std=0.016011
+E   assert np.float64(0.016010668097338667) < 0.01
+_____________________ test_linear_trajectory_has_smooth_z ______________________
+test_dataset_generator.py:550: in test_linear_trajectory_has_smooth_z
+    assert residual_std < 0.01, f"Linear trajectory Z should be smooth, but residual std={residual_std:.6f}"
+E   AssertionError: Linear trajectory Z should be smooth, but residual std=0.023088
+E   assert np.float64(0.023087943780916484) < 0.01
+=========================== short test summary info ============================
+FAILED test_dataset_generator.py::test_circular_trajectory_has_constant_z - A...
+FAILED test_dataset_generator.py::test_linear_trajectory_has_smooth_z - Asser...
+========================= 2 failed, 2 passed in 1.48s ==========================

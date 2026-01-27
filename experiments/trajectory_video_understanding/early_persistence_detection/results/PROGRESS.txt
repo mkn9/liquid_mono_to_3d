@@ -1,0 +1,2 @@
+[2026-01-26 02:17:01] Training started
+[2026-01-26 02:17:47] Epoch 1: Loss=0.4599, Acc=77.29%, Early Stop Rate=0.00%

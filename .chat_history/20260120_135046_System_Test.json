@@ -1,0 +1,19 @@
+{
+  "timestamp": "20260120_135046",
+  "topic": "System Test",
+  "tags": [
+    "testing",
+    "implementation"
+  ],
+  "metadata": {},
+  "messages": [
+    {
+      "role": "user",
+      "content": "Test question"
+    },
+    {
+      "role": "assistant",
+      "content": "Test answer"
+    }
+  ]
+}

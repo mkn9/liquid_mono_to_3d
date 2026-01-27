@@ -1,0 +1,13 @@
+{
+  "total_samples": 500,
+  "early_stop_count": 488,
+  "early_stop_rate": 0.976,
+  "avg_decision_frame": 2.828,
+  "median_decision_frame": 2.0,
+  "avg_compute_saved_percent": 91.1625,
+  "median_compute_saved_percent": 93.75,
+  "total_compute_saved_percent": 45581.25,
+  "avg_inference_time_ms": 9.64516019821167,
+  "median_inference_time_ms": 8.846044540405273,
+  "speedup_factor": 5.657708628005658
+}

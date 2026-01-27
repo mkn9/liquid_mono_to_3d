@@ -1,0 +1,83 @@
+=== Test Evidence Provenance ===
+Label: shape_rendering_tests
+Timestamp: 2026-01-20 02:52:35 UTC
+Git Commit: 8fe17068d37710297857e090f2875a210ae6de03
+Git Branch: classification/magvit-trajectories
+Git Status: clean
+Python: Python 2.7.12
+pytest: pytest 8.4.2
+Working Dir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories
+Hostname: MacBook-Pro-3
+OS: Darwin 23.6.0
+Top Dependencies:
+matplotlib==3.10.1
+numpy==2.2.2
+opencv-python==4.11.0.86
+pandas==2.2.3
+pytest==8.4.2
+pytest-cov==7.0.0
+pytest-mock==3.15.0
+torch==2.6.0
+torchvision==0.21.0
+=== End Provenance ===
+
+=== Test Run: shape_rendering_tests ===
+=== Command: pytest -q ===
+
+.............                                                            [100%]
+=============================== warnings summary ===============================
+test_magvit_3d_generation.py:44
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:44: PytestUnknownMarkWarning: Unknown pytest.mark.invariant - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.invariant
+
+test_magvit_3d_generation.py:75
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:75: PytestUnknownMarkWarning: Unknown pytest.mark.invariant - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.invariant
+
+test_magvit_3d_generation.py:116
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:116: PytestUnknownMarkWarning: Unknown pytest.mark.invariant - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.invariant
+
+test_magvit_3d_generation.py:139
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:139: PytestUnknownMarkWarning: Unknown pytest.mark.invariant - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.invariant
+
+test_magvit_3d_generation.py:162
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:162: PytestUnknownMarkWarning: Unknown pytest.mark.invariant - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.invariant
+
+test_magvit_3d_generation.py:185
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:185: PytestUnknownMarkWarning: Unknown pytest.mark.deterministic - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.deterministic
+
+test_magvit_3d_generation.py:228
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:228: PytestUnknownMarkWarning: Unknown pytest.mark.golden - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.golden
+
+test_magvit_3d_generation.py:271
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:271: PytestUnknownMarkWarning: Unknown pytest.mark.golden - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.golden
+
+test_magvit_3d_generation.py:309
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:309: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_3d_generation.py:338
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:338: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_3d_generation.py:370
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:370: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_3d_generation.py:395
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:395: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_3d_generation.py:426
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_3d_generation.py:426: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+
+=== exit_code: 0 ===

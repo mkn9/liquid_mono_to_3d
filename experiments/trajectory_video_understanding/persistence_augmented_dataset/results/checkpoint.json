@@ -1,0 +1,11 @@
+{
+  "last_completed_idx": 9999,
+  "total_samples": 10000,
+  "timestamp": "2026-01-26T00:33:04.082169",
+  "statistics": {
+    "total_processed": 10000,
+    "total_transients_added": 35077,
+    "errors": 0,
+    "start_time": 1769387497.7758548
+  }
+}

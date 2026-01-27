@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4, timeout-2.4.0
+collected 44 items
+
+test_vision_language_bridge.py ...................                       [ 43%]
+test_vision_language_bridge_structural.py .........................      [100%]
+
+=============================== warnings summary ===============================
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py::TestFeatureExtraction::test_extract_features_from_video
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py::TestFeatureExtraction::test_extract_features_batch
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py::TestFeatureExtraction::test_features_are_deterministic
+  /home/ubuntu/mono_to_3d/venv/lib/python3.12/site-packages/torch/nn/modules/transformer.py:382: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.self_attn.batch_first was not True(use batch_first for better inference performance)
+    warnings.warn(
+
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py: 10 warnings
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge_structural.py: 16 warnings
+  /home/ubuntu/mono_to_3d/experiments/trajectory_video_understanding/vision_language_integration/vision_language_bridge.py:234: UserWarning: LLM initialization failed: openai package required: pip install openai. Using MockLLM for testing.
+    warnings.warn(f"LLM initialization failed: {e}. Using MockLLM for testing.")
+
+experiments/trajectory_video_understanding/vision_language_integration/test_vision_language_bridge.py::TestVisionLanguageBridge::test_multiple_llm_backends
+  /home/ubuntu/mono_to_3d/experiments/trajectory_video_understanding/vision_language_integration/vision_language_bridge.py:234: UserWarning: LLM initialization failed: transformers package required: pip install transformers. Using MockLLM for testing.
+    warnings.warn(f"LLM initialization failed: {e}. Using MockLLM for testing.")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 44 passed, 30 warnings in 7.33s ========================

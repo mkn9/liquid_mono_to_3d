@@ -1,0 +1,15 @@
+# MagVIT Validation Configuration (10 epochs)
+# Quick validation before full training
+
+epochs: 10
+batch_size: 8  # Can use larger batch (lightweight model)
+learning_rate: 0.001
+feature_dim: 256  # MagVIT typically uses 256
+checkpoint_interval: 2  # Save every 2 epochs
+output_dir: results/validation
+data_dir: ../../data/10k_trajectories  # Relative to branch directory
+
+# Optional settings
+early_stopping: false
+weight_decay: 0.0001
+

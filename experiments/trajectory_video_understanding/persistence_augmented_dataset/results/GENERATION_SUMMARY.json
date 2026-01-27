@@ -1,0 +1,19 @@
+{
+  "completed": true,
+  "timestamp": "2026-01-26T00:33:04.093555",
+  "statistics": {
+    "total_processed": 10000,
+    "total_transients_added": 35077,
+    "errors": 0,
+    "start_time": 1769387497.7758548
+  },
+  "elapsed_time_minutes": 1.4386280576388042,
+  "configuration": {
+    "source_dir": "/home/ubuntu/mono_to_3d/data/10k_trajectories/videos",
+    "output_dir": "/home/ubuntu/mono_to_3d/experiments/trajectory_video_understanding/persistence_augmented_dataset/output",
+    "num_samples": 10000,
+    "transients_per_video": 3,
+    "checkpoint_interval": 1000,
+    "sync_interval": 2000
+  }
+}

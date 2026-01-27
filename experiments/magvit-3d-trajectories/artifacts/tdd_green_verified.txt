@@ -1,0 +1,154 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 27 items
+
+test_magvit_verified.py .........F.......F....F...F                      [100%]
+
+=================================== FAILURES ===================================
+_________ TestProjection.test_project_point_behind_camera_returns_inf __________
+test_magvit_verified.py:190: in test_project_point_behind_camera_returns_inf
+    assert np.isinf(pixel[0]) or np.isinf(pixel[1]), "Should return inf for point behind camera"
+E   AssertionError: Should return inf for point behind camera
+E   assert (np.False_ or np.False_)
+E    +  where np.False_ = <ufunc 'isinf'>(np.float64(140.0))
+E    +    where <ufunc 'isinf'> = np.isinf
+E    +  and   np.False_ = <ufunc 'isinf'>(np.float64(310.0))
+E    +    where <ufunc 'isinf'> = np.isinf
+________ TestConvexHullRendering.test_rendered_shape_has_nonzero_pixels ________
+test_magvit_verified.py:351: in test_rendered_shape_has_nonzero_pixels
+    assert len(red_pixels[0]) > 0, "Rendered shape should have colored pixels"
+E   AssertionError: Rendered shape should have colored pixels
+E   assert 0 > 0
+E    +  where 0 = len(array([], dtype=int64))
+_________ TestTrajectoryGeneration.test_parabolic_trajectory_has_apex __________
+test_magvit_verified.py:422: in test_parabolic_trajectory_has_apex
+    assert 4 < max_idx < 12, f"Parabola apex should be in middle, got index {max_idx}"
+E   AssertionError: Parabola apex should be in middle, got index 0
+E   assert 4 < np.int64(0)
+________ TestDatasetGeneration.test_dataset_videos_have_nonzero_pixels _________
+test_magvit_verified.py:488: in test_dataset_videos_have_nonzero_pixels
+    pytest.fail("No non-zero pixels found in any video")
+E   Failed: No non-zero pixels found in any video
+=============================== warnings summary ===============================
+test_magvit_verified.py:30
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:30: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    pytestmark = pytest.mark.unit
+
+test_magvit_verified.py:36
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:36: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:53
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:53: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:66
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:66: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:83
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:83: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:100
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:100: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:111
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:111: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:128
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:128: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:143
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:143: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:164
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:164: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:178
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:178: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:192
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:192: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:210
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:210: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:235
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:235: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:247
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:247: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:264
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:264: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:293
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:293: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:322
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:322: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:337
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:337: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:353
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:353: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:373
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:373: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:385
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:385: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:398
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:398: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:411
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:411: PytestUnknownMarkWarning: Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.unit
+
+test_magvit_verified.py:428
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:428: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+test_magvit_verified.py:440
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:440: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+test_magvit_verified.py:452
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:452: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+test_magvit_verified.py:464
+  /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d/experiments/magvit-3d-trajectories/test_magvit_verified.py:464: PytestUnknownMarkWarning: Unknown pytest.mark.integration - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html
+    @pytest.mark.integration
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED test_magvit_verified.py::TestProjection::test_project_point_behind_camera_returns_inf
+FAILED test_magvit_verified.py::TestConvexHullRendering::test_rendered_shape_has_nonzero_pixels
+FAILED test_magvit_verified.py::TestTrajectoryGeneration::test_parabolic_trajectory_has_apex
+FAILED test_magvit_verified.py::TestDatasetGeneration::test_dataset_videos_have_nonzero_pixels
+================== 4 failed, 23 passed, 28 warnings in 0.41s ===================

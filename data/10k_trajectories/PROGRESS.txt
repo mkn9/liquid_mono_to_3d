@@ -1,0 +1,19 @@
+10K Trajectory Dataset Generation Progress
+========================================
+
+Timestamp: 2026-01-25 19:41:05
+
+Overall Progress: 10000/10000 (100.0%)
+
+Class Breakdown:
+  Linear:     2500/2500
+  Circular:   2500/2500
+  Helical:    2500/2500
+  Parabolic:  2500/2500
+
+Performance:
+  Elapsed Time: 448.2s (7.5min)
+  Speed: 22.3 samples/sec
+  ETA: 0.0s (0.0min)
+
+Last Update: 2026-01-25T19:41:05.372513

@@ -1,0 +1,33 @@
+# Contract for Branch: exp/real-magvit-integration
+# This branch implements REAL MAGVIT (VQ-VAE for video)
+
+name: "real_magvit_integration"
+
+description: "Real MAGVIT VQ-VAE for video compression and representation learning"
+
+# Must be able to import MAGVIT components
+imports:
+  - "import torch"
+  - "import torch.nn as nn"
+  - "import torch.nn.functional as F"
+
+# Commands that verify MAGVIT functionality
+commands:
+  - name: "check_magvit_module"
+    cmd: "python3 -c 'import sys; sys.path.insert(0, \"experiments/magvit_I3D_LLM_basic_trajectory\"); from magvit_vqvae import MAGVIT_VQ_VAE; print(\"✓ MAGVIT module imports\")'"
+
+# Tests must pass
+tests:
+  - name: "foundation_tests"
+    cmd: "pytest experiments/magvit_I3D_LLM_basic_trajectory/test_trajectory_renderer.py -q"
+  - name: "dataset_tests"
+    cmd: "pytest experiments/magvit_I3D_LLM_basic_trajectory/test_dataset_generator.py -q"
+  - name: "magvit_tests"
+    cmd: "pytest experiments/magvit_I3D_LLM_basic_trajectory/test_magvit_vqvae.py -q"
+
+# Evidence files that should exist
+evidence:
+  - "experiments/magvit_I3D_LLM_basic_trajectory/artifacts/tdd_magvit_red.txt"
+  - "experiments/magvit_I3D_LLM_basic_trajectory/artifacts/tdd_magvit_green.txt"
+  - "experiments/magvit_I3D_LLM_basic_trajectory/artifacts/tdd_magvit_refactor.txt"
+

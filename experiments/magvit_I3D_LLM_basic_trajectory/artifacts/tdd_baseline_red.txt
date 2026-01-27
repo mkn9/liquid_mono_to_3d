@@ -1,0 +1,52 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 8 items
+
+test_simple_baseline.py FFFFFFFF                                         [100%]
+
+=================================== FAILURES ===================================
+____________________ test_simple_cnn_accepts_video_tensors _____________________
+test_simple_baseline.py:18: in test_simple_cnn_accepts_video_tensors
+    from simple_3dcnn_baseline import Simple3DCNNClassifier
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+________________________ test_simple_cnn_classification ________________________
+test_simple_baseline.py:29: in test_simple_cnn_classification
+    from simple_3dcnn_baseline import Simple3DCNNClassifier
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+_________________________ test_model_is_deterministic __________________________
+test_simple_baseline.py:48: in test_model_is_deterministic
+    from simple_3dcnn_baseline import Simple3DCNNClassifier
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+________________________ test_model_has_reasonable_size ________________________
+test_simple_baseline.py:64: in test_model_has_reasonable_size
+    from simple_3dcnn_baseline import Simple3DCNNClassifier
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+______________________ test_template_generator_is_honest _______________________
+test_simple_baseline.py:77: in test_template_generator_is_honest
+    from simple_3dcnn_baseline import generate_description_from_template
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+_________________________ test_template_output_format __________________________
+test_simple_baseline.py:93: in test_template_output_format
+    from simple_3dcnn_baseline import generate_description_from_template
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+__________________________ test_no_misleading_imports __________________________
+test_simple_baseline.py:107: in test_no_misleading_imports
+    import simple_3dcnn_baseline
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+____________________________ test_batch_processing _____________________________
+test_simple_baseline.py:121: in test_batch_processing
+    from simple_3dcnn_baseline import Simple3DCNNClassifier
+E   ModuleNotFoundError: No module named 'simple_3dcnn_baseline'
+=========================== short test summary info ============================
+FAILED test_simple_baseline.py::test_simple_cnn_accepts_video_tensors - Modul...
+FAILED test_simple_baseline.py::test_simple_cnn_classification - ModuleNotFou...
+FAILED test_simple_baseline.py::test_model_is_deterministic - ModuleNotFoundE...
+FAILED test_simple_baseline.py::test_model_has_reasonable_size - ModuleNotFou...
+FAILED test_simple_baseline.py::test_template_generator_is_honest - ModuleNot...
+FAILED test_simple_baseline.py::test_template_output_format - ModuleNotFoundE...
+FAILED test_simple_baseline.py::test_no_misleading_imports - ModuleNotFoundEr...
+FAILED test_simple_baseline.py::test_batch_processing - ModuleNotFoundError: ...
+============================== 8 failed in 4.31s ===============================

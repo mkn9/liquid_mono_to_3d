@@ -1,0 +1,7 @@
+timestamp_utc: 2026-01-24T12:51:54Z
+git_sha: 6b2763974ea35cf578f670e1bc7dd6c283474a37
+pwd: /home/ubuntu/mono_to_3d
+python: Python 3.12.6
+pip: pip 24.2 from /home/ubuntu/mono_to_3d/venv/lib/python3.12/site-packages/pip (python 3.12)
+pytest: pytest 8.4.1
+platform: Linux ip-172-31-32-83 6.8.0-1024-aws #26~22.04.1-Ubuntu SMP Wed Feb 19 06:54:57 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux

@@ -1,0 +1,38 @@
+# Contract: GPT-4 Integration
+# This contract WILL FAIL because only templates were used, not actual GPT-4
+# Rename to .yaml (remove .DISABLED) to enforce this requirement
+
+name: "gpt4_integration"
+
+# These imports must work for real GPT-4 integration
+imports:
+  - "from openai import OpenAI"
+  - "import os"
+
+# Test that API key exists and API call works
+commands:
+  - name: "api_call_test"
+    cmd: "python scripts/test_gpt4_call.py --save-response artifacts/proof_outputs/gpt4_response.json"
+    outputs:
+      - "artifacts/proof_outputs/gpt4_response.json"
+
+tests:
+  - name: "llm_integration_tests"
+    cmd: "pytest tests/test_llm_integration.py::test_gpt4_actual_call -v"
+
+evidence:
+  - "artifacts/proof_outputs/gpt4_response.json"
+  - "artifacts/proof_outputs/gpt4_token_usage.txt"
+
+# REASON THIS IS DISABLED:
+# The system claimed "GPT-4 integration" but only used template-based
+# string formatting. No actual API calls were made.
+#
+# TO FIX:
+# 1. Install openai: pip install openai
+# 2. Set OPENAI_API_KEY environment variable
+# 3. Replace llm_integration_gpt4.py templates with actual API calls
+# 4. Create scripts/test_gpt4_call.py
+# 5. Create tests/test_llm_integration.py with real API test
+# 6. Rename this file to gpt4_integration.yaml (remove .DISABLED)
+

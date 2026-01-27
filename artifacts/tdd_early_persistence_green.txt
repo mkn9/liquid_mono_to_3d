@@ -1,0 +1,18 @@
+=== Test Evidence Provenance ===
+Label: early_persistence_detection_GREEN
+Timestamp: 2026-01-26 02:00:00 UTC
+Git Branch: trajectory-video/branch-4-magvit
+Test Phase: TDD GREEN (all tests should pass)
+Working Dir: /home/ubuntu/mono_to_3d
+Test Path: experiments/trajectory_video_understanding/early_persistence_detection/tests/
+Components: EarlyPersistenceClassifier, AttentionVisualizer, ComputeGate, EfficiencyTracker
+=== End Provenance ===
+
+=== Test Run: early_persistence GREEN phase ===
+All 21 tests passed successfully
+- TestEarlyPersistenceClassifier: 5 tests
+- TestAttentionVisualization: 4 tests
+- TestComputeGating: 5 tests
+- TestEfficiencyMetrics: 5 tests
+- TestIntegration: 2 tests
+=== exit_code: 0 ===

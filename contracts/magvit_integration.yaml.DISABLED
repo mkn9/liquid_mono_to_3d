@@ -1,0 +1,39 @@
+# Contract: MAGVIT Integration
+# This contract WILL FAIL because MAGVIT was not actually implemented
+# Rename to .yaml (remove .DISABLED) to enforce this requirement
+
+name: "magvit_integration"
+
+# These imports will fail - no magvit2 installed
+imports:
+  - "from magvit2 import MAGVIT_VQ_VAE"
+  - "from magvit2 import VectorQuantizer"
+
+# This command would test encode/decode functionality
+commands:
+  - name: "encode_decode_test"
+    cmd: "python -c 'from magvit2 import MAGVIT_VQ_VAE; import torch; model = MAGVIT_VQ_VAE(); video = torch.randn(1, 16, 3, 64, 64); codes = model.encode(video); reconstructed = model.decode(codes); print(f\"Encoded to {codes.shape}, decoded to {reconstructed.shape}\")'"
+    outputs:
+      - "artifacts/proof_outputs/magvit_reconstruction.png"
+
+# Tests that would verify MAGVIT functionality
+tests:
+  - name: "magvit_tests"
+    cmd: "pytest tests/test_magvit_integration.py -v"
+
+# Evidence files that should be produced
+evidence:
+  - "artifacts/proof_outputs/magvit_reconstruction.png"
+  - "artifacts/proof_outputs/magvit_codes_visualization.png"
+
+# REASON THIS IS DISABLED:
+# The 4-branch system claimed "MAGVIT integration" but actually used
+# SimplifiedI3D (basic Conv3d). This contract exposes that lie.
+# 
+# TO FIX:
+# 1. Install real MAGVIT: pip install magvit2
+# 2. Implement actual MAGVIT encoder/decoder
+# 3. Create tests/test_magvit_integration.py
+# 4. Generate required visualizations
+# 5. Rename this file to magvit_integration.yaml (remove .DISABLED)
+

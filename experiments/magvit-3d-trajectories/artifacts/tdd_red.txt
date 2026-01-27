@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-8.4.1, pluggy-1.6.0
+rootdir: /home/ubuntu/mono_to_3d
+configfile: pytest.ini
+plugins: jaxtyping-0.3.2, cov-7.0.0, dash-3.1.1, anyio-4.9.0, typeguard-4.4.4
+collected 9 items
+
+test_magvit_3d_fixed.py FFFFFFFFF                                        [100%]
+
+=================================== FAILURES ===================================
+________________________ test_smooth_trajectory_no_nans ________________________
+test_magvit_3d_fixed.py:48: in test_smooth_trajectory_no_nans
+    from magvit_3d_fixed import smooth_trajectory
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+____________________ test_smooth_trajectory_preserves_shape ____________________
+test_magvit_3d_fixed.py:64: in test_smooth_trajectory_preserves_shape
+    from magvit_3d_fixed import smooth_trajectory
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+__________________ test_projection_behind_camera_returns_none __________________
+test_magvit_3d_fixed.py:83: in test_projection_behind_camera_returns_none
+    from magvit_3d_fixed import project_3d_to_2d
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+__________________ test_projection_on_axis_gives_image_center __________________
+test_magvit_3d_fixed.py:103: in test_projection_on_axis_gives_image_center
+    from magvit_3d_fixed import project_3d_to_2d
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+___________________ test_linear_trajectory_generation_golden ___________________
+test_magvit_3d_fixed.py:140: in test_linear_trajectory_generation_golden
+    from magvit_3d_fixed import generate_smooth_linear
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+___________________ test_circular_trajectory_stays_in_plane ____________________
+test_magvit_3d_fixed.py:181: in test_circular_trajectory_stays_in_plane
+    from magvit_3d_fixed import generate_smooth_circular
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+_____________________ test_projection_formula_correctness ______________________
+test_magvit_3d_fixed.py:218: in test_projection_formula_correctness
+    from magvit_3d_fixed import project_3d_to_2d
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+________________________ test_smoothing_reduces_jitter _________________________
+test_magvit_3d_fixed.py:248: in test_smoothing_reduces_jitter
+    from magvit_3d_fixed import smooth_trajectory
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+________________ test_full_pipeline_generates_valid_projections ________________
+test_magvit_3d_fixed.py:289: in test_full_pipeline_generates_valid_projections
+    from magvit_3d_fixed import (
+E   ModuleNotFoundError: No module named 'magvit_3d_fixed'
+=========================== short test summary info ============================
+FAILED test_magvit_3d_fixed.py::test_smooth_trajectory_no_nans - ModuleNotFou...
+FAILED test_magvit_3d_fixed.py::test_smooth_trajectory_preserves_shape - Modu...
+FAILED test_magvit_3d_fixed.py::test_projection_behind_camera_returns_none - ...
+FAILED test_magvit_3d_fixed.py::test_projection_on_axis_gives_image_center - ...
+FAILED test_magvit_3d_fixed.py::test_linear_trajectory_generation_golden - Mo...
+FAILED test_magvit_3d_fixed.py::test_circular_trajectory_stays_in_plane - Mod...
+FAILED test_magvit_3d_fixed.py::test_projection_formula_correctness - ModuleN...
+FAILED test_magvit_3d_fixed.py::test_smoothing_reduces_jitter - ModuleNotFoun...
+FAILED test_magvit_3d_fixed.py::test_full_pipeline_generates_valid_projections
+============================== 9 failed in 0.33s ===============================

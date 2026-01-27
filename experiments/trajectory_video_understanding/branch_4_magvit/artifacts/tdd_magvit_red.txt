@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.1, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/mono_to_3d
+configfile: pytest.ini
+plugins: cov-6.2.1, mock-3.14.1
+collected 10 items
+
+tests/test_magvit_extractor.py FFFFFFFFFF                                [100%]
+
+=================================== FAILURES ===================================
+___________________ test_magvit_extractor_inherits_from_base ___________________
+tests/test_magvit_extractor.py:33: in test_magvit_extractor_inherits_from_base
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+__________________ test_magvit_extractor_feature_dim_property __________________
+tests/test_magvit_extractor.py:41: in test_magvit_extractor_feature_dim_property
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+__________________ test_magvit_extractor_extract_output_shape __________________
+tests/test_magvit_extractor.py:50: in test_magvit_extractor_extract_output_shape
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+_________________ test_magvit_extractor_batch_size_flexibility _________________
+tests/test_magvit_extractor.py:63: in test_magvit_extractor_batch_size_flexibility
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+__________________ test_magvit_extractor_temporal_flexibility __________________
+tests/test_magvit_extractor.py:75: in test_magvit_extractor_temporal_flexibility
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+______________________ test_magvit_extractor_has_encoder _______________________
+tests/test_magvit_extractor.py:87: in test_magvit_extractor_has_encoder
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+_____________ test_magvit_extractor_integration_with_unified_model _____________
+tests/test_magvit_extractor.py:98: in test_magvit_extractor_integration_with_unified_model
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+_____________________ test_magvit_extractor_training_step ______________________
+tests/test_magvit_extractor.py:115: in test_magvit_extractor_training_step
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+_____________________ test_magvit_extractor_deterministic ______________________
+tests/test_magvit_extractor.py:146: in test_magvit_extractor_deterministic
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+_______________________ test_magvit_extractor_efficient ________________________
+tests/test_magvit_extractor.py:162: in test_magvit_extractor_efficient
+    from feature_extractor import MagVITExtractor
+E   ModuleNotFoundError: No module named 'feature_extractor'
+=========================== short test summary info ============================
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_inherits_from_base
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_feature_dim_property
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_extract_output_shape
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_batch_size_flexibility
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_temporal_flexibility
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_has_encoder - Mo...
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_integration_with_unified_model
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_training_step - ...
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_deterministic - ...
+FAILED tests/test_magvit_extractor.py::test_magvit_extractor_efficient - Modu...
+============================== 10 failed in 0.52s ==============================

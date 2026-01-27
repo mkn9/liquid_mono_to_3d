@@ -1,0 +1,57 @@
+{
+  "overall_accuracy": 0.804,
+  "per_class_accuracy": {
+    "Linear": {
+      "accuracy": 0.984,
+      "correct": 123,
+      "total": 125
+    },
+    "Circular": {
+      "accuracy": 0.968,
+      "correct": 121,
+      "total": 125
+    },
+    "Helical": {
+      "accuracy": 0.264,
+      "correct": 33,
+      "total": 125
+    },
+    "Parabolic": {
+      "accuracy": 1.0,
+      "correct": 125,
+      "total": 125
+    }
+  },
+  "confusion_matrix": [
+    [
+      123,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      121,
+      4,
+      0
+    ],
+    [
+      0,
+      92,
+      33,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      125
+    ]
+  ],
+  "position_mse": 0.24087423086166382,
+  "position_mae": 0.29061171412467957,
+  "position_rmse": 0.4907893956287807,
+  "num_samples": 500,
+  "num_correct": 402,
+  "num_incorrect": 98
+}
