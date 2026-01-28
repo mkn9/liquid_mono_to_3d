@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 3 items
+
+experiments/liquid_vlm_integration/tests/test_fusion_real_features.py 📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+
+✅ Real fusion output: torch.Size([1, 4096])
+.📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+
+✅ Gradients flow through real fusion
+.📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+
+✅ Liquid fusion differs from static baseline
+.
+
+============================== 3 passed in 3.97s ===============================

@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 3 items
+
+experiments/liquid_vlm_integration/tests/test_fusion_real_features.py .. [ 66%]
+.                                                                        [100%]
+
+============================== 3 passed in 4.37s ===============================

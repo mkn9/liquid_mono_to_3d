@@ -1,0 +1,28 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 3 items
+
+experiments/liquid_vlm_integration/tests/test_2d_feature_extraction.py F [ 33%]
+FF                                                                       [100%]
+
+=================================== FAILURES ===================================
+_______________________ test_can_load_real_video_sample ________________________
+experiments/liquid_vlm_integration/tests/test_2d_feature_extraction.py:13: in test_can_load_real_video_sample
+    from extract_2d_features import load_trajectory_video
+E   ModuleNotFoundError: No module named 'extract_2d_features'
+___________________ test_extract_2d_features_from_real_video ___________________
+experiments/liquid_vlm_integration/tests/test_2d_feature_extraction.py:26: in test_extract_2d_features_from_real_video
+    from extract_2d_features import extract_2d_features_batch
+E   ModuleNotFoundError: No module named 'extract_2d_features'
+_______________________ test_features_are_deterministic ________________________
+experiments/liquid_vlm_integration/tests/test_2d_feature_extraction.py:37: in test_features_are_deterministic
+    from extract_2d_features import extract_2d_features_batch
+E   ModuleNotFoundError: No module named 'extract_2d_features'
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_2d_feature_extraction.py::test_can_load_real_video_sample
+FAILED experiments/liquid_vlm_integration/tests/test_2d_feature_extraction.py::test_extract_2d_features_from_real_video
+FAILED experiments/liquid_vlm_integration/tests/test_2d_feature_extraction.py::test_features_are_deterministic
+============================== 3 failed in 1.35s ===============================

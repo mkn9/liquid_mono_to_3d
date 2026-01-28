@@ -1,0 +1,80 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 5 items
+
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py \n✅ MagVIT checkpoint found: experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+   Size: 16.79 MB
+..📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+F📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+F📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+F
+
+=================================== FAILURES ===================================
+___________________________ test_magvit_model_loads ____________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:38: in test_magvit_model_loads
+    extractor = MagVITFeatureExtractor(
+experiments/liquid_vlm_integration/magvit_loader.py:74: in __init__
+    self.model.load_state_dict(extractor_state, strict=False)
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:2581: in load_state_dict
+    raise RuntimeError(
+E   RuntimeError: Error(s) in loading state_dict for MagVITExtractor:
+E   	size mismatch for temporal_encoder.4.weight: copying a param with shape torch.Size([256, 512, 3]) from checkpoint, the shape in current model is torch.Size([512, 512, 3]).
+E   	size mismatch for temporal_encoder.4.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for tokenizer.in_proj_weight: copying a param with shape torch.Size([768, 256]) from checkpoint, the shape in current model is torch.Size([1536, 512]).
+E   	size mismatch for tokenizer.in_proj_bias: copying a param with shape torch.Size([768]) from checkpoint, the shape in current model is torch.Size([1536]).
+E   	size mismatch for tokenizer.out_proj.weight: copying a param with shape torch.Size([256, 256]) from checkpoint, the shape in current model is torch.Size([512, 512]).
+E   	size mismatch for tokenizer.out_proj.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for layer_norm.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for layer_norm.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+________________________ test_magvit_extracts_features _________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:51: in test_magvit_extracts_features
+    extractor = MagVITFeatureExtractor(
+experiments/liquid_vlm_integration/magvit_loader.py:74: in __init__
+    self.model.load_state_dict(extractor_state, strict=False)
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:2581: in load_state_dict
+    raise RuntimeError(
+E   RuntimeError: Error(s) in loading state_dict for MagVITExtractor:
+E   	size mismatch for temporal_encoder.4.weight: copying a param with shape torch.Size([256, 512, 3]) from checkpoint, the shape in current model is torch.Size([512, 512, 3]).
+E   	size mismatch for temporal_encoder.4.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for tokenizer.in_proj_weight: copying a param with shape torch.Size([768, 256]) from checkpoint, the shape in current model is torch.Size([1536, 512]).
+E   	size mismatch for tokenizer.in_proj_bias: copying a param with shape torch.Size([768]) from checkpoint, the shape in current model is torch.Size([1536]).
+E   	size mismatch for tokenizer.out_proj.weight: copying a param with shape torch.Size([256, 256]) from checkpoint, the shape in current model is torch.Size([512, 512]).
+E   	size mismatch for tokenizer.out_proj.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for layer_norm.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for layer_norm.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+_______________________ test_magvit_feature_consistency ________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:72: in test_magvit_feature_consistency
+    extractor = MagVITFeatureExtractor(
+experiments/liquid_vlm_integration/magvit_loader.py:74: in __init__
+    self.model.load_state_dict(extractor_state, strict=False)
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:2581: in load_state_dict
+    raise RuntimeError(
+E   RuntimeError: Error(s) in loading state_dict for MagVITExtractor:
+E   	size mismatch for temporal_encoder.4.weight: copying a param with shape torch.Size([256, 512, 3]) from checkpoint, the shape in current model is torch.Size([512, 512, 3]).
+E   	size mismatch for temporal_encoder.4.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.running_mean: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for temporal_encoder.5.running_var: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for tokenizer.in_proj_weight: copying a param with shape torch.Size([768, 256]) from checkpoint, the shape in current model is torch.Size([1536, 512]).
+E   	size mismatch for tokenizer.in_proj_bias: copying a param with shape torch.Size([768]) from checkpoint, the shape in current model is torch.Size([1536]).
+E   	size mismatch for tokenizer.out_proj.weight: copying a param with shape torch.Size([256, 256]) from checkpoint, the shape in current model is torch.Size([512, 512]).
+E   	size mismatch for tokenizer.out_proj.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for layer_norm.weight: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+E   	size mismatch for layer_norm.bias: copying a param with shape torch.Size([256]) from checkpoint, the shape in current model is torch.Size([512]).
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_model_loads
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_extracts_features
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_feature_consistency
+========================= 3 failed, 2 passed in 1.99s ==========================

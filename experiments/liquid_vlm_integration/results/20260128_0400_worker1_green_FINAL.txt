@@ -1,0 +1,30 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 5 items
+
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py \n✅ MagVIT checkpoint found: experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+   Size: 16.79 MB
+..📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+\n✅ MagVIT model loaded successfully
+.📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+\n✅ Features extracted: torch.Size([1, 512])
+.📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+\n✅ Feature extraction is deterministic
+.
+
+============================== 5 passed in 23.78s ==============================

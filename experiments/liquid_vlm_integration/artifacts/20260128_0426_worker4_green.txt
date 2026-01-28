@@ -1,0 +1,34 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 3 items
+
+experiments/liquid_vlm_integration/tests/test_tinyllama_integration.py F [ 33%]
+FF                                                                       [100%]
+
+=================================== FAILURES ===================================
+__________________________ test_tinyllama_model_loads __________________________
+experiments/liquid_vlm_integration/tests/test_tinyllama_integration.py:12: in test_tinyllama_model_loads
+    from tinyllama_vlm import TinyLlamaVLM
+experiments/liquid_vlm_integration/tinyllama_vlm.py:6: in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+E   ModuleNotFoundError: No module named 'transformers'
+__________________ test_generate_description_from_embeddings ___________________
+experiments/liquid_vlm_integration/tests/test_tinyllama_integration.py:20: in test_generate_description_from_embeddings
+    from tinyllama_vlm import TinyLlamaVLM
+experiments/liquid_vlm_integration/tinyllama_vlm.py:6: in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+E   ModuleNotFoundError: No module named 'transformers'
+____________________________ test_batch_generation _____________________________
+experiments/liquid_vlm_integration/tests/test_tinyllama_integration.py:35: in test_batch_generation
+    from tinyllama_vlm import TinyLlamaVLM
+experiments/liquid_vlm_integration/tinyllama_vlm.py:6: in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+E   ModuleNotFoundError: No module named 'transformers'
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_tinyllama_integration.py::test_tinyllama_model_loads
+FAILED experiments/liquid_vlm_integration/tests/test_tinyllama_integration.py::test_generate_description_from_embeddings
+FAILED experiments/liquid_vlm_integration/tests/test_tinyllama_integration.py::test_batch_generation
+============================== 3 failed in 1.35s ===============================

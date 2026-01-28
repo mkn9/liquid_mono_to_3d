@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 18 items
+
+tests/test_liquid_fusion.py ......                                       [ 33%]
+tests/test_liquid_3d_reconstruction.py ......                            [ 66%]
+tests/test_liquid_e2e_integration.py ......                              [100%]
+
+============================== 18 passed in 6.28s ==============================

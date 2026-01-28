@@ -1,0 +1,62 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 5 items
+
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py FFFFF
+
+=================================== FAILURES ===================================
+________________________ test_magvit_checkpoint_exists _________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:19: in test_magvit_checkpoint_exists
+    assert checkpoint_path.stat().st_size > 1e9, "Checkpoint file should be >1GB"
+E   AssertionError: Checkpoint file should be >1GB
+E   assert 0 > 1000000000.0
+E    +  where 0 = os.stat_result(st_mode=33204, st_ino=277608, st_dev=66306, st_nlink=1, st_uid=1000, st_gid=1000, st_size=0, st_atime=1769571313, st_mtime=1769571313, st_ctime=1769571313).st_size
+E    +    where os.stat_result(st_mode=33204, st_ino=277608, st_dev=66306, st_nlink=1, st_uid=1000, st_gid=1000, st_size=0, st_atime=1769571313, st_mtime=1769571313, st_ctime=1769571313) = stat()
+E    +      where stat = PosixPath('/home/ubuntu/magvit_weights/video_128_262144.ckpt').stat
+________________________ test_magvit_loader_can_import _________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:28: in test_magvit_loader_can_import
+    from magvit_loader import MagVITFeatureExtractor
+experiments/liquid_vlm_integration/magvit_loader.py:16: in <module>
+    from feature_extractor import MagVITExtractor
+experiments/liquid_vlm_integration/feature_extractor.py:27: in <module>
+    from base_extractor import FeatureExtractor
+E   ModuleNotFoundError: No module named 'base_extractor'
+
+During handling of the above exception, another exception occurred:
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:31: in test_magvit_loader_can_import
+    pytest.fail(f"Cannot import MagVITFeatureExtractor: {e}")
+E   Failed: Cannot import MagVITFeatureExtractor: No module named 'base_extractor'
+___________________________ test_magvit_model_loads ____________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:36: in test_magvit_model_loads
+    from magvit_loader import MagVITFeatureExtractor
+experiments/liquid_vlm_integration/magvit_loader.py:16: in <module>
+    from feature_extractor import MagVITExtractor
+experiments/liquid_vlm_integration/feature_extractor.py:27: in <module>
+    from base_extractor import FeatureExtractor
+E   ModuleNotFoundError: No module named 'base_extractor'
+________________________ test_magvit_extracts_features _________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:49: in test_magvit_extracts_features
+    from magvit_loader import MagVITFeatureExtractor
+experiments/liquid_vlm_integration/magvit_loader.py:16: in <module>
+    from feature_extractor import MagVITExtractor
+experiments/liquid_vlm_integration/feature_extractor.py:27: in <module>
+    from base_extractor import FeatureExtractor
+E   ModuleNotFoundError: No module named 'base_extractor'
+_______________________ test_magvit_feature_consistency ________________________
+experiments/liquid_vlm_integration/tests/test_magvit_loader.py:70: in test_magvit_feature_consistency
+    from magvit_loader import MagVITFeatureExtractor
+experiments/liquid_vlm_integration/magvit_loader.py:16: in <module>
+    from feature_extractor import MagVITExtractor
+experiments/liquid_vlm_integration/feature_extractor.py:27: in <module>
+    from base_extractor import FeatureExtractor
+E   ModuleNotFoundError: No module named 'base_extractor'
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_checkpoint_exists
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_loader_can_import
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_model_loads
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_extracts_features
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_loader.py::test_magvit_feature_consistency
+============================== 5 failed in 1.36s ===============================

@@ -1,0 +1,126 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 3 items
+
+experiments/liquid_vlm_integration/tests/test_fusion_real_features.py 📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+F📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+F📥 Loading MagVIT model from: /home/ubuntu/liquid_mono_to_3d/experiments/liquid_vlm_integration/checkpoints/magvit_100pct_20260125.pt
+✅ MagVIT model loaded successfully
+   Device: cuda
+   Native feature dim: 256
+   Projected to: 512 (Liquid Fusion compatible)
+F
+
+=================================== FAILURES ===================================
+_______________________ test_fusion_with_real_2d_and_3d ________________________
+experiments/liquid_vlm_integration/tests/test_fusion_real_features.py:15: in test_fusion_with_real_2d_and_3d
+    result = test_real_data_fusion()
+             ^^^^^^^^^^^^^^^^^^^^^^^
+experiments/liquid_vlm_integration/test_fusion_integration.py:38: in test_real_data_fusion
+    llm_embeddings = pipeline(noisy_3d, features_2d)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/vision_language_integration/liquid_e2e_pipeline.py:58: in forward
+    llm_embeddings = self.liquid_fusion(features_2d, features_3d, reset_state=reset_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/vision_language_integration/dual_visual_adapter.py:51: in forward
+    emb_2d = self.adapter_2d(features_2d)  # (B, 4096)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/linear.py:125: in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+_____________________ test_fusion_gradients_with_real_data _____________________
+experiments/liquid_vlm_integration/tests/test_fusion_real_features.py:25: in test_fusion_gradients_with_real_data
+    result = test_real_data_fusion()
+             ^^^^^^^^^^^^^^^^^^^^^^^
+experiments/liquid_vlm_integration/test_fusion_integration.py:38: in test_real_data_fusion
+    llm_embeddings = pipeline(noisy_3d, features_2d)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/vision_language_integration/liquid_e2e_pipeline.py:58: in forward
+    llm_embeddings = self.liquid_fusion(features_2d, features_3d, reset_state=reset_state)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/vision_language_integration/dual_visual_adapter.py:51: in forward
+    emb_2d = self.adapter_2d(features_2d)  # (B, 4096)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/linear.py:125: in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+_______________________ test_compare_fusion_vs_baseline ________________________
+experiments/liquid_vlm_integration/tests/test_fusion_real_features.py:36: in test_compare_fusion_vs_baseline
+    comparison = compare_fusion_methods()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/liquid_vlm_integration/test_fusion_integration.py:58: in compare_fusion_methods
+    liquid_output = liquid_fusion(features_2d, features_3d, reset_state=True)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+experiments/trajectory_video_understanding/vision_language_integration/dual_visual_adapter.py:51: in forward
+    emb_2d = self.adapter_2d(features_2d)  # (B, 4096)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1739: in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/module.py:1750: in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/pytorch/lib/python3.12/site-packages/torch/nn/modules/linear.py:125: in forward
+    return F.linear(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   RuntimeError: Expected all tensors to be on the same device, but found at least two devices, cpu and cuda:0! (when checking argument for argument mat1 in method wrapper_CUDA_addmm)
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_fusion_real_features.py::test_fusion_with_real_2d_and_3d
+FAILED experiments/liquid_vlm_integration/tests/test_fusion_real_features.py::test_fusion_gradients_with_real_data
+FAILED experiments/liquid_vlm_integration/tests/test_fusion_real_features.py::test_compare_fusion_vs_baseline
+============================== 3 failed in 6.26s ===============================

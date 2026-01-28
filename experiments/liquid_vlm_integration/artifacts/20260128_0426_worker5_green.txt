@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.6, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/ubuntu/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.1, cov-7.0.0, xdist-3.8.0, anyio-4.9.0
+collected 3 items
+
+experiments/liquid_vlm_integration/tests/test_gpt4_integration.py FFF    [100%]
+
+=================================== FAILURES ===================================
+___________________________ test_gpt4_api_available ____________________________
+experiments/liquid_vlm_integration/tests/test_gpt4_integration.py:12: in test_gpt4_api_available
+    from gpt4_vlm import GPT4VLM
+experiments/liquid_vlm_integration/gpt4_vlm.py:7: in <module>
+    from openai import OpenAI
+E   ModuleNotFoundError: No module named 'openai'
+________________________ test_generate_description_gpt4 ________________________
+experiments/liquid_vlm_integration/tests/test_gpt4_integration.py:20: in test_generate_description_gpt4
+    from gpt4_vlm import GPT4VLM
+experiments/liquid_vlm_integration/gpt4_vlm.py:7: in <module>
+    from openai import OpenAI
+E   ModuleNotFoundError: No module named 'openai'
+________________________ test_compare_gpt4_vs_tinyllama ________________________
+experiments/liquid_vlm_integration/tests/test_gpt4_integration.py:36: in test_compare_gpt4_vs_tinyllama
+    from compare_vlms import compare_models
+experiments/liquid_vlm_integration/compare_vlms.py:9: in <module>
+    from tinyllama_vlm import TinyLlamaVLM
+experiments/liquid_vlm_integration/tinyllama_vlm.py:6: in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+E   ModuleNotFoundError: No module named 'transformers'
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_gpt4_integration.py::test_gpt4_api_available
+FAILED experiments/liquid_vlm_integration/tests/test_gpt4_integration.py::test_generate_description_gpt4
+FAILED experiments/liquid_vlm_integration/tests/test_gpt4_integration.py::test_compare_gpt4_vs_tinyllama
+============================== 3 failed in 1.35s ===============================
