@@ -1,0 +1,37 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 5 items
+
+tests/test_gpt4_evaluation.py FFFFF                                      [100%]
+
+=================================== FAILURES ===================================
+_________ TestGPT4Evaluation.test_run_gpt4_evaluation_function_exists __________
+tests/test_gpt4_evaluation.py:20: in test_run_gpt4_evaluation_function_exists
+    from run_gpt4_evaluation import run_gpt4_evaluation
+E   ModuleNotFoundError: No module named 'run_gpt4_evaluation'
+__________ TestGPT4Evaluation.test_evaluation_loads_existing_results ___________
+tests/test_gpt4_evaluation.py:25: in test_evaluation_loads_existing_results
+    from run_gpt4_evaluation import load_existing_results
+E   ModuleNotFoundError: No module named 'run_gpt4_evaluation'
+__________ TestGPT4Evaluation.test_gpt4_description_added_to_samples ___________
+tests/test_gpt4_evaluation.py:34: in test_gpt4_description_added_to_samples
+    from run_gpt4_evaluation import run_gpt4_evaluation
+E   ModuleNotFoundError: No module named 'run_gpt4_evaluation'
+_____________ TestGPT4Evaluation.test_enhanced_metrics_calculated ______________
+tests/test_gpt4_evaluation.py:42: in test_enhanced_metrics_calculated
+    from run_gpt4_evaluation import calculate_enhanced_metrics
+E   ModuleNotFoundError: No module named 'run_gpt4_evaluation'
+___________ TestGPT4Evaluation.test_results_saved_with_proper_naming ___________
+tests/test_gpt4_evaluation.py:56: in test_results_saved_with_proper_naming
+    from run_gpt4_evaluation import get_output_filename
+E   ModuleNotFoundError: No module named 'run_gpt4_evaluation'
+=========================== short test summary info ============================
+FAILED tests/test_gpt4_evaluation.py::TestGPT4Evaluation::test_run_gpt4_evaluation_function_exists
+FAILED tests/test_gpt4_evaluation.py::TestGPT4Evaluation::test_evaluation_loads_existing_results
+FAILED tests/test_gpt4_evaluation.py::TestGPT4Evaluation::test_gpt4_description_added_to_samples
+FAILED tests/test_gpt4_evaluation.py::TestGPT4Evaluation::test_enhanced_metrics_calculated
+FAILED tests/test_gpt4_evaluation.py::TestGPT4Evaluation::test_results_saved_with_proper_naming
+============================== 5 failed in 0.06s ===============================

@@ -1,0 +1,553 @@
+{
+  "timestamp": "20260128_0508",
+  "num_samples": 10,
+  "samples": [
+    {
+      "sample_id": 0,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video shows a 3D trajectory of a ball being launched from a platform. The ball travels in a spiral pattern, with the trajectory varying from left to right. The trajectory is described using the following formula:\n\n$v_x(t) = v_0 \\cos(\\omega t + \\phi)$\n$v_y(t) = v_0 \\sin(\\omega t + \\phi)$\n\nwhere $v_x(t)$ and $v_y(t)$ are the x and y velocities of the ball, $",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The trajectory follows a straight line, indicating a linear motion pattern. Since it is a straight path, there are no changes in direction or curvature in the motion.\n\n2. Direction of Movement: The primary direction of movement is along the depth or Y-axis. Given the start and end positions, the movement appears to be in a positive direction along the Y-axis.\n\n3. Start and End Positions: The start position of the trajectory is at coordinates [0.2, 0.3, 3.0]. The end position of the trajectory is at coordinates [0.6, 0.7, 2.6]. These coordinates are approximate and may have a slight margin of error inherent in the tracking system.\n\n4. Motion Characteristics: The average speed of the trajectory is 0.173 units per frame. Given that the path is a straight line, the motion appears to be smooth. The total path length is 0.693 units,",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_0_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.2639593908629442,
+        "semantic_similarity": 0.45547251949690654
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.08849557522123894,
+        "semantic_similarity": 0.14511375049567302
+      }
+    },
+    {
+      "sample_id": 1,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo 2:\nTitle: How to make a 3D trajectory using 3D printing\n\nDescription: In this video, we will demonstrate how to create a 3D printed model of a complex object using the 3D printing process. We will show you how to select the right materials, use the right software, and create the model step by step. We will also explain how to manipulate the model in 3D viewers and share the final product with others.\n\nVideo 3:\nTitle: How to print complex 3D objects using 3D printing\n\nDescription: In this video, we will show you how to create complex 3D objects using 3D printing.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern:\nThe trajectory forms a straight line, indicating a linear motion pattern. There's a steady and unidirectional movement from the start position to the end position.\n\n2. Direction of Movement:\nThe primary direction of the movement is along the depth, which is the Y-axis. This implies that the object has moved most significantly in depth.\n\n3. Start and End Positions with Approximate Coordinates:\nThe object began its movement at the coordinates [0.2, 0.3, 3.0] and ended at [0.6, 0.7, 2.6]. This suggests that the object moved towards positive values on the X and Y axes, and towards negative values on the Z axis.\n\n4. Motion Characteristics:\nThe average speed of the object is 0.173 units per frame, indicating a steady pace throughout its movement. The total path length is 0.693 units, suggesting a smooth trajectory without any abrupt changes in direction",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_1_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.25641025641025644,
+        "semantic_similarity": 0.4794111760305095
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.055944055944055944,
+        "semantic_similarity": 0.09683285830082268
+      }
+    },
+    {
+      "sample_id": 2,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video shows a 3D trajectory of a ball being launched from a platform. The ball travels in a spiral pattern, with the trajectory varying from moment to moment. The video also shows the ball's position and velocity at each point in the trajectory. The trajectory is made up of a series of rotations, with each rotation corresponding to a specific acceleration or velocity change. The video shows how the trajectory can be represented using different coordinates and vectors. Overall, the video provides a good visual representation of how the 3D trajectory of a ball can be",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.5
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The 3D trajectory represents a straight line. This suggests a consistent, linear motion pattern from the start position to the end position.\n\n2. Direction of Movement: The primary direction of movement is along the depth axis, which is the Y-axis. Given the start and end positions, the object appears to be moving in a positive direction along the X and Y axes, and a negative direction along the Z-axis.\n\n3. Start and End Positions with Approximate Coordinates: The trajectory begins at an approximate position of [0.2, 0.3, 3.0] and ends at an approximate position of [0.6, 0.7, 2.6]. \n\n4. Motion Characteristics: The object moves at an average speed of 0.173 units per frame. Given that the trajectory is a straight line, the motion is likely smooth and continuous. The total path length of the trajectory is 0.693 units.",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_2_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.26943005181347146,
+        "semantic_similarity": 0.4778751935620073
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.08275862068965519,
+        "semantic_similarity": 0.15529100683443642
+      }
+    },
+    {
+      "sample_id": 3,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video starts with a 3D model of a cube being created. The cube is then moved to a different location. The cube is created using the vertex-based modeling approach. The video then shows the 3D trajectory of the cube as it moves. The cube starts at a point on the bottom of the cube and moves up, over, and around the cube. The video ends with the cube being created at a different location.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The trajectory is of the type straight line, indicating that the motion is linear and follows a straight path from the start position to the end position. \n\n2. Direction of Movement: The primary direction of movement is depth, which corresponds to the Y-axis. This means the object is moving mostly along the depth dimension. \n\n3. Start and End Positions with Approximate Coordinates: The object begins its movement from the starting coordinates [0.2, 0.3, 3.0] and ends at the coordinates [0.6, 0.7, 2.6]. \n\n4. Motion Characteristics: The average speed of the object is approximately 0.173 units per frame, and the total length of the path is 0.693 units. The information provided does not specify the smoothness of the movement, but given the linear trajectory and constant average speed, it can be inferred that the motion is likely to be smooth.",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_3_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.25906735751295334,
+        "semantic_similarity": 0.4199843053780322
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.06504065040650406,
+        "semantic_similarity": 0.13533401472752143
+      }
+    },
+    {
+      "sample_id": 4,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgK02sZZ4\n\nThe video starts with a 3D model of a cube being created on a computer screen. As the camera moves around the cube, the 3D model is revealed in real-time.\n\nThe 3D model starts at the center of the cube and moves outwards in all directions. The camera zooms in and out of the cube as it moves.\n\nAt the end of the video, the 3D model is zoomed out to reveal the entire cube. The camera then zooms in to show the details of the 3D model.\n\nThe ",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: \nThe path is a straight line, indicating that the movement captured is linear without any turns or curves. \n\n2. Direction of Movement: \nThe primary direction of movement is along the depth axis, which is the Y-axis in this case. This suggests a forward or backward motion, given the context.\n\n3. Start and End Positions with Approximate Coordinates:\nThe start position of the trajectory is at the coordinates [0.2, 0.3, 3.0] and the end position is at the coordinates [0.6, 0.7, 2.6]. This shows the object moved from a point closer to the observer to a point further away.\n\n4. Motion Characteristics (speed, smoothness):\nThe average speed of the movement is 0.173 units per frame. Since the path is a straight line and the speed is averaged, it can be inferred that the motion was smooth and consistent throughout, without any sudden",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_4_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.21649484536082475,
+        "semantic_similarity": 0.4055382649861997
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.072992700729927,
+        "semantic_similarity": 0.1462664573598476
+      }
+    },
+    {
+      "sample_id": 5,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video starts with a 3D model of a cube being created. The cube is then moved to a different location. The cube is created using the 3D modeling software, which allows the program to create the cube's shape and size.\n\nThe video then shows the cube being manipulated in 3D space using the program's 3D modeling tools. The cube is rotated, moved, and scaled in 3D space. The program then generates the 3D trajectory that the cube follows as it moves.\n\nThe 3D",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The trajectory follows a straight-line path. Given the start and end positions, the trajectory is linear without any observable changes in direction or pattern. \n\n2. Direction of Movement: The primary direction of the movement is along the depth or Y-axis. It commences from a higher coordinate and ends at a lower one, indicating a downward movement.\n\n3. Start and End Positions with Approximate Coordinates: The trajectory starts at the position [0.2, 0.3, 3.0] and ends at the position [0.6, 0.7, 2.6]. The approximate coordinates indicate a shift towards the positive side on all three axes, X, Y, and Z with the most significant movement along the depth or Y-axis.\n\n4. Motion Characteristics (Speed, Smoothness): The average speed of the motion is 0.173 units/frame. Given that the path follows a straight line, the motion can be inferred to",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_5_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.03245485258758033,
+        "rouge_l": 0.2383419689119171,
+        "semantic_similarity": 0.45017538678408603
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.06015037593984962,
+        "semantic_similarity": 0.12138525536701127
+      }
+    },
+    {
+      "sample_id": 6,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video starts with a 3D model of a cube being created. The cube is then moved to a different location. The cube is created using the vertex-based modeling approach. The video then shows the 3D trajectory of the cube as it moves. The cube starts at a point on the bottom of the cube and moves up, over, and around the cube. The video ends with the cube being created at a different location.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The trajectory follows a straight line path, indicating a linear motion pattern. The object is moving directly from one point to another without any deviation or curve in its path.\n\n2. Direction of Movement: The primary direction of movement is along the depth, which is the Y-axis in 3D space. This means the object is primarily moving inwards or outwards from the viewer's perspective.\n\n3. Start and End Positions: The start position of the trajectory is at the coordinates [0.2, 0.3, 3.0] and it ends at the position [0.6, 0.7, 2.6]. These coordinates indicate that the object has moved in all three dimensions (X, Y, Z) from its initial position to its final position.\n\n4. Motion Characteristics: The average speed of the object is 0.173 units/frame, which indicates a relatively steady pace of movement. The total path length of",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_6_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.03346227395576603,
+        "rouge_l": 0.2680412371134021,
+        "semantic_similarity": 0.441595812199945
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.06504065040650406,
+        "semantic_similarity": 0.13533401472752143
+      }
+    },
+    {
+      "sample_id": 7,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video shows a 3D trajectory of a ball being shot from a gun. The ball travels in a spiral pattern, with the trajectory changing from left to right. The video also shows the ball hitting a target and bouncing off of it. The trajectory is shown in blue on the video, and the target is shown in yellow. The ball starts at the left end of the trajectory, travels to the right, and then hits the target. The trajectory changes as the ball moves, with the ball traveling in a spiral pattern. The final traject",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The trajectory is of the type straight line. This indicates that the object moved in a direct path from its start position to end position without any detour or change in path.\n\n2. Direction of Movement: The primary direction of the movement is along the depth, which corresponds to the Y-axis in 3D space. This means the object moved deeper into the field of view instead of horizontally or vertically.\n\n3. Start and End Positions: The starting coordinates of the trajectory are approximately [0.2, 0.3, 3.0] and the ending coordinates are approximately [0.6, 0.7, 2.6] in the 3D space.\n\n4. Motion Characteristics: The object's average speed during its trajectory was 0.173 units per frame. Given the straight-line path, we can infer that the motion was smooth without any abrupt changes in speed or direction. The total path length of the movement was",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_7_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.2436548223350254,
+        "semantic_similarity": 0.409644015186457
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0839160839160839,
+        "semantic_similarity": 0.16937559661648022
+      }
+    },
+    {
+      "sample_id": 8,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe trajectory shown in this video is a sine wave with a period of 5 seconds. The amplitude of the wave is 1, and the frequency is 1 Hz. The initial position of the wave is at the origin (0, 0, 0), and the final position is at the origin (0, 0, 1). The wave travels at a constant speed of 3 meters per second. The video also shows the position and speed of the wave as it travels along the x-axis.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 1,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The given 3D trajectory follows a straight line pattern. This suggests a linear motion, which is consistent from the start to end position. \n\n2. Direction of Movement: The primary direction of movement is along the depth, indicated by the Y-axis. This motion is from a higher value to a lower value on the Y-axis, suggesting a movement in the negative direction along this axis.\n\n3. Start and End Positions with Approximate Coordinates: The trajectory starts at the coordinates [0.2, 0.3, 3.0] and ends at the coordinates [0.6, 0.7, 2.6]. This suggests that the object has moved in the positive direction along the X and Z axes, and in the negative direction along the Y-axis.\n\n4. Motion Characteristics (Speed, Smoothness): The average speed of the trajectory is 0.173 units per frame, which indicates a relatively slow and possibly controlled movement",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_8_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.2268041237113402,
+        "semantic_similarity": 0.45049158559965735
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.13846153846153847,
+        "semantic_similarity": 0.34156079496966374
+      }
+    },
+    {
+      "sample_id": 9,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02zlZ4\n\nThe video starts with a 3D model of a cube being rotated at different angles. As the cube rotates, the 3D model follows the cube's trajectory through space, resulting in a smooth and continuous motion.\n\nThe 3D model is created using the Unity game engine and is built using a rigged model with joints. The rigging process creates a hierarchy of joints that allow the animation to be controlled in a 3D space.\n\nThe video demonstrates how the Unity game engine allows for the creation of 3D models with complex shapes",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.5
+      },
+      "gpt4_description": "1. Path Shape and Motion Pattern: The shape of the path is a straight line, indicating a linear motion pattern. \n\n2. Direction of Movement: The primary direction of movement is along the depth or Y-axis. This suggests that the object was primarily moving further or closer to the camera.\n\n3. Start and End Positions: The start position of the trajectory is at the coordinates [0.2, 0.3, 3.0] and the end position is at the coordinates [0.6, 0.7, 2.6]. \n\n4. Motion Characteristics: The average speed of the movement is 0.173 units per frame, indicating a relatively steady speed. Given the straight path and consistent speed, the motion can be inferred as being smooth. The total path length is 0.693 units, which is the total distance covered from the start to the end position.",
+      "gpt4_metrics": {
+        "type_mentioned": 1,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_9_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.2777777777777778,
+        "semantic_similarity": 0.44396237667068533
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.05755395683453237,
+        "semantic_similarity": 0.1453103091443788
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "tinyllama_avg_accuracy": 0.35,
+    "tinyllama_std_accuracy": 0.16583123951777
+  },
+  "gpt4_evaluation_timestamp": "20260131_1835",
+  "tinyllama_avg_accuracy": 0.35,
+  "gpt4_avg_accuracy": 0.75
+}

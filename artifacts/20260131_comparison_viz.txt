@@ -1,0 +1,21 @@
+======================================================================
+Creating GPT-4 vs TinyLlama Comparison Visualizations
+======================================================================
+
+📂 Loading evaluation results...
+✅ Loaded 10 samples
+
+📊 Generating visualizations...
+✅ Created: results/20260131_1836_accuracy_comparison.png
+✅ Created: results/20260131_1836_metrics_breakdown.png
+✅ Created: results/20260131_1836_enhanced_metrics_comparison.png
+
+======================================================================
+✅ All visualizations created successfully!
+======================================================================
+
+Output files:
+  1. results/20260131_1836_accuracy_comparison.png
+  2. results/20260131_1836_metrics_breakdown.png
+  3. results/20260131_1836_enhanced_metrics_comparison.png
+

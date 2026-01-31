@@ -1,0 +1,35 @@
+======================================================================
+GPT-4 Baseline Evaluation
+======================================================================
+
+✅ API key found: sk-proj-Nae9JoShWsxa... (length: 164)
+
+📂 Loading existing results from: results/20260128_0508_vlm_evaluation.json
+✅ Loaded 10 samples
+
+🤖 Initializing GPT-4 client...
+✅ GPT-4 client ready
+
+🔄 Generating GPT-4 descriptions...
+  Sample 1/10... ✅ (accuracy: 75.0%)
+  Sample 2/10... ✅ (accuracy: 75.0%)
+  Sample 3/10... ✅ (accuracy: 75.0%)
+  Sample 4/10... ✅ (accuracy: 75.0%)
+  Sample 5/10... ✅ (accuracy: 75.0%)
+  Sample 6/10... ✅ (accuracy: 75.0%)
+  Sample 7/10... ✅ (accuracy: 75.0%)
+  Sample 8/10... ✅ (accuracy: 75.0%)
+  Sample 9/10... ✅ (accuracy: 75.0%)
+  Sample 10/10... ✅ (accuracy: 75.0%)
+
+======================================================================
+📊 Results Summary
+======================================================================
+TinyLlama Average Accuracy: 35.0%
+GPT-4 Average Accuracy:     75.0%
+Improvement:                40.0%
+======================================================================
+
+💾 Results saved to: results/20260131_1835_gpt4_evaluation.json
+
+✅ GPT-4 evaluation complete!

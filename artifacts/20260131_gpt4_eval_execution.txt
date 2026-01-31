@@ -1,0 +1,46 @@
+======================================================================
+GPT-4 Baseline Evaluation
+======================================================================
+
+✅ API key found: sk-proj-Nae9JoShWsxa... (length: 164)
+
+📂 Loading existing results from: results/20260128_0508_vlm_evaluation.json
+✅ Loaded 10 samples
+
+🤖 Initializing GPT-4 VLM...
+✅ GPT-4 API configured
+✅ GPT-4 VLM ready
+
+🔄 Generating GPT-4 descriptions...
+  Sample 1/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 2/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 3/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 4/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 5/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 6/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 7/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 8/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 9/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+  Sample 10/10... ⚠️  GPT-4 generation failed: 'str' object has no attribute 'cpu'
+✅ (accuracy: 0.0%)
+
+======================================================================
+📊 Results Summary
+======================================================================
+TinyLlama Average Accuracy: 35.0%
+GPT-4 Average Accuracy:     0.0%
+Improvement:                -35.0%
+======================================================================
+
+💾 Results saved to: results/20260131_1833_gpt4_evaluation.json
+
+✅ GPT-4 evaluation complete!

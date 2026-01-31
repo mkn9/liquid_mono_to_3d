@@ -1,0 +1,553 @@
+{
+  "timestamp": "20260128_0508",
+  "num_samples": 10,
+  "samples": [
+    {
+      "sample_id": 0,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video shows a 3D trajectory of a ball being launched from a platform. The ball travels in a spiral pattern, with the trajectory varying from left to right. The trajectory is described using the following formula:\n\n$v_x(t) = v_0 \\cos(\\omega t + \\phi)$\n$v_y(t) = v_0 \\sin(\\omega t + \\phi)$\n\nwhere $v_x(t)$ and $v_y(t)$ are the x and y velocities of the ball, $",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_0_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.08849557522123894,
+        "semantic_similarity": 0.14511375049567302
+      }
+    },
+    {
+      "sample_id": 1,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo 2:\nTitle: How to make a 3D trajectory using 3D printing\n\nDescription: In this video, we will demonstrate how to create a 3D printed model of a complex object using the 3D printing process. We will show you how to select the right materials, use the right software, and create the model step by step. We will also explain how to manipulate the model in 3D viewers and share the final product with others.\n\nVideo 3:\nTitle: How to print complex 3D objects using 3D printing\n\nDescription: In this video, we will show you how to create complex 3D objects using 3D printing.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_1_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.055944055944055944,
+        "semantic_similarity": 0.09683285830082268
+      }
+    },
+    {
+      "sample_id": 2,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video shows a 3D trajectory of a ball being launched from a platform. The ball travels in a spiral pattern, with the trajectory varying from moment to moment. The video also shows the ball's position and velocity at each point in the trajectory. The trajectory is made up of a series of rotations, with each rotation corresponding to a specific acceleration or velocity change. The video shows how the trajectory can be represented using different coordinates and vectors. Overall, the video provides a good visual representation of how the 3D trajectory of a ball can be",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.5
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_2_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.08275862068965519,
+        "semantic_similarity": 0.15529100683443642
+      }
+    },
+    {
+      "sample_id": 3,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video starts with a 3D model of a cube being created. The cube is then moved to a different location. The cube is created using the vertex-based modeling approach. The video then shows the 3D trajectory of the cube as it moves. The cube starts at a point on the bottom of the cube and moves up, over, and around the cube. The video ends with the cube being created at a different location.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_3_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.06504065040650406,
+        "semantic_similarity": 0.13533401472752143
+      }
+    },
+    {
+      "sample_id": 4,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgK02sZZ4\n\nThe video starts with a 3D model of a cube being created on a computer screen. As the camera moves around the cube, the 3D model is revealed in real-time.\n\nThe 3D model starts at the center of the cube and moves outwards in all directions. The camera zooms in and out of the cube as it moves.\n\nAt the end of the video, the 3D model is zoomed out to reveal the entire cube. The camera then zooms in to show the details of the 3D model.\n\nThe ",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_4_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.072992700729927,
+        "semantic_similarity": 0.1462664573598476
+      }
+    },
+    {
+      "sample_id": 5,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video starts with a 3D model of a cube being created. The cube is then moved to a different location. The cube is created using the 3D modeling software, which allows the program to create the cube's shape and size.\n\nThe video then shows the cube being manipulated in 3D space using the program's 3D modeling tools. The cube is rotated, moved, and scaled in 3D space. The program then generates the 3D trajectory that the cube follows as it moves.\n\nThe 3D",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_5_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.06015037593984962,
+        "semantic_similarity": 0.12138525536701127
+      }
+    },
+    {
+      "sample_id": 6,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video starts with a 3D model of a cube being created. The cube is then moved to a different location. The cube is created using the vertex-based modeling approach. The video then shows the 3D trajectory of the cube as it moves. The cube starts at a point on the bottom of the cube and moves up, over, and around the cube. The video ends with the cube being created at a different location.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_6_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.06504065040650406,
+        "semantic_similarity": 0.13533401472752143
+      }
+    },
+    {
+      "sample_id": 7,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe video shows a 3D trajectory of a ball being shot from a gun. The ball travels in a spiral pattern, with the trajectory changing from left to right. The video also shows the ball hitting a target and bouncing off of it. The trajectory is shown in blue on the video, and the target is shown in yellow. The ball starts at the left end of the trajectory, travels to the right, and then hits the target. The trajectory changes as the ball moves, with the ball traveling in a spiral pattern. The final traject",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.25
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_7_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0839160839160839,
+        "semantic_similarity": 0.16937559661648022
+      }
+    },
+    {
+      "sample_id": 8,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02sZZ4\n\nThe trajectory shown in this video is a sine wave with a period of 5 seconds. The amplitude of the wave is 1, and the frequency is 1 Hz. The initial position of the wave is at the origin (0, 0, 0), and the final position is at the origin (0, 0, 1). The wave travels at a constant speed of 3 meters per second. The video also shows the position and speed of the wave as it travels along the x-axis.",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 1,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.75
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_8_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.13846153846153847,
+        "semantic_similarity": 0.34156079496966374
+      }
+    },
+    {
+      "sample_id": 9,
+      "ground_truth": {
+        "type": "straight line",
+        "start": [
+          0.2,
+          0.3,
+          3.0
+        ],
+        "end": [
+          0.6,
+          0.7,
+          2.6
+        ],
+        "direction": [
+          0.5773502358562944,
+          0.5773502358562944,
+          -0.5773502358562943
+        ],
+        "primary_direction": "depth (Y-axis)",
+        "avg_speed": 0.1732050807568877,
+        "curvature": 3.2337968063847744e-16,
+        "length": 0.6928203230275508,
+        "num_points": 5,
+        "description": "A straight line moving primarily in the depth (Y-axis) direction. Starting from (0.20, 0.30, 3.00) and ending at (0.60, 0.70, 2.60). Average speed: 0.173 units/frame. Total length: 0.69 units."
+      },
+      "tinyllama_description": "\n\nVideo: https://www.youtube.com/watch?v=ZmFgq02zlZ4\n\nThe video starts with a 3D model of a cube being rotated at different angles. As the cube rotates, the 3D model follows the cube's trajectory through space, resulting in a smooth and continuous motion.\n\nThe 3D model is created using the Unity game engine and is built using a rigged model with joints. The rigging process creates a hierarchy of joints that allow the animation to be controlled in a 3D space.\n\nThe video demonstrates how the Unity game engine allows for the creation of 3D models with complex shapes",
+      "tinyllama_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 1,
+        "speed_mentioned": 1,
+        "overall_accuracy": 0.5
+      },
+      "gpt4_description": "[ERROR: 'str' object has no attribute 'cpu']",
+      "gpt4_metrics": {
+        "type_mentioned": 0,
+        "direction_mentioned": 0,
+        "has_coordinates": 0,
+        "speed_mentioned": 0,
+        "overall_accuracy": 0.0
+      },
+      "visualization": "experiments/liquid_vlm_integration/results/2020260128_0508_sample_9_visualization.png",
+      "gpt4_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.0,
+        "semantic_similarity": 0.0
+      },
+      "tinyllama_enhanced_metrics": {
+        "bleu": 0.0,
+        "rouge_l": 0.05755395683453237,
+        "semantic_similarity": 0.1453103091443788
+      }
+    }
+  ],
+  "aggregate_metrics": {
+    "tinyllama_avg_accuracy": 0.35,
+    "tinyllama_std_accuracy": 0.16583123951777
+  },
+  "gpt4_evaluation_timestamp": "20260131_1833",
+  "tinyllama_avg_accuracy": 0.35,
+  "gpt4_avg_accuracy": 0.0
+}
