@@ -1,10 +1,44 @@
 """
 Worker 4: TinyLlama VLM Integration
 Generates trajectory descriptions from Liquid embeddings
+Updated with improved structured prompting to reduce hallucinations
 """
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from pathlib import Path
+
+
+def create_structured_prompt():
+    """
+    Create structured prompt for trajectory description.
+    
+    This improved prompt provides explicit constraints and structure
+    to reduce hallucinations and improve description quality.
+    
+    Returns:
+        str: Structured prompt with instructions and constraints
+    """
+    prompt = """You are analyzing a 3D trajectory from stereo camera tracking.
+
+Describe ONLY what you observe about:
+1. Path shape: Is it straight, curved, circular, spiral, or another pattern?
+2. Direction of movement: Which axis (X, Y, or Z) shows the most change? 
+3. Start and end positions: Approximate coordinates where the path begins and ends
+4. Motion characteristics: Is it moving at constant speed, accelerating, or decelerating?
+
+Be factual and specific. Use only what you see in the trajectory data.
+
+DO NOT mention:
+- Videos, URLs, or web links
+- Tutorials or how-to guides  
+- Made-up objects or scenarios
+- Information not present in the data
+
+Focus on the geometric and kinematic properties of the trajectory path.
+
+Trajectory description:"""
+    
+    return prompt
 
 
 class TinyLlamaVLM:
@@ -31,17 +65,21 @@ class TinyLlamaVLM:
         print(f"✅ TinyLlama loaded on {self.model.device}")
     
     @torch.no_grad()
-    def generate_description(self, embeddings: torch.Tensor, prompt: str = "Describe this trajectory:") -> str:
+    def generate_description(self, embeddings: torch.Tensor, prompt: str = None) -> str:
         """
         Generate trajectory description from Liquid embeddings.
         
         Args:
             embeddings: (1, 4096) Liquid fusion output
-            prompt: Text prompt
+            prompt: Text prompt (uses structured prompt if None)
             
         Returns:
             description: Generated text
         """
+        # Use structured prompt by default
+        if prompt is None:
+            prompt = create_structured_prompt()
+        
         # Project visual embeddings to TinyLlama space
         visual_tokens = self.visual_projector(embeddings.half().to(self.model.device))
         
