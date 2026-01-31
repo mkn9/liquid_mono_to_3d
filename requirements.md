@@ -2,7 +2,7 @@
 
 **3D Track Reconstruction from Multiple 2D Mono Tracks**
 
-**Last Updated:** January 24, 2026
+**Last Updated:** January 31, 2026
 
 ---
 
@@ -1494,20 +1494,59 @@ Phase 2: Add Structural Tests AFTER Implementation
 
 #### API Key and Secrets Management
 
-**For LLM integrations and cloud services:**
+**For LLM integrations (OpenAI GPT-4, etc.) and cloud services:**
 
-**✅ Recommended: Environment Variables**
+**✅ Storage Locations**
+
+Store API keys in shell configuration files:
+- **MacBook**: `~/.zshrc`
+- **EC2**: `~/.bashrc`
+
 ```bash
-# On EC2 or development machine
-echo 'export OPENAI_API_KEY="sk-your-key"' >> ~/.bashrc
-source ~/.bashrc
+# Add to ~/.zshrc (MacBook) or ~/.bashrc (EC2)
+export OPENAI_API_KEY="sk-proj-..."
+```
 
-# Python automatically detects
+**✅ Setup for New Instances**
+
+```bash
+# On MacBook: Get the key
+grep OPENAI_API_KEY ~/.zshrc
+
+# Copy the entire export line
+# SSH to new instance and paste into ~/.bashrc
+ssh -i /Users/mike/keys/AutoGenKeyPair.pem ubuntu@NEW_IP
+nano ~/.bashrc  # Paste, save (Ctrl+O), exit (Ctrl+X)
+source ~/.bashrc
+```
+
+**✅ Verification (Without Exposing Key)**
+
+```bash
+# Show only first 20 characters (safe)
+echo $OPENAI_API_KEY | head -c 20 && echo "..."
+# Expected: sk-proj-Nae9JoShWsxa...
+
+# Check length (should be 164 characters)
+echo $OPENAI_API_KEY | wc -c
+# Expected: 164
+```
+
+**✅ Python Usage**
+
+```python
 import os
+
+# Access key from environment
 api_key = os.environ.get('OPENAI_API_KEY')
+
+# Verify without printing full key
+if api_key:
+    print(f"✅ Key found: {api_key[:20]}... (length: {len(api_key)})")
 ```
 
 **✅ For Testing: Mock Services**
+
 ```python
 @pytest.fixture
 def mock_llm():
@@ -1516,18 +1555,35 @@ def mock_llm():
         def generate(self, prompt):
             return "Deterministic test response"
     return MockLLM()
+
+# Use in tests
+def test_llm_integration(mock_llm):
+    result = mock_llm.generate("test prompt")
+    assert isinstance(result, str)
 ```
 
-**❌ Never:**
+**❌ NEVER:**
 - Commit API keys to git
 - Hardcode secrets in source code
-- Require real API calls for tests to pass
+- Write keys in documentation files
+- Include keys in chat logs
+- Require real API calls for unit tests to pass
 
-**Security Checklist:**
-- [ ] API keys in environment variables (not code)
+**⚠️ Security Best Practices:**
+- [ ] API keys stored in environment variables only (not code, not docs)
+- [ ] Keys referenced by location (`~/.zshrc`, `~/.bashrc`), never printed in full
 - [ ] Tests use mocks (don't require real API keys)
-- [ ] `.env` files in `.gitignore`
-- [ ] Production credentials separate from development
+- [ ] `.env` files in `.gitignore` if used
+- [ ] Verify without exposing: `echo $KEY | head -c 20`
+- [ ] Rotate keys if exposed in git history
+
+**Key Rotation (if compromised):**
+
+1. Generate new key: https://platform.openai.com/api-keys
+2. Update `~/.zshrc` on MacBook
+3. Update `~/.bashrc` on EC2
+4. Delete old key from OpenAI dashboard
+5. Verify: `echo $OPENAI_API_KEY | head -c 20`
 
 #### Quick Reference: TDD Best Practices
 
