@@ -1,0 +1,47 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 7 items
+
+tests/test_improved_prompting.py FFFFFFF                                 [100%]
+
+=================================== FAILURES ===================================
+_____ TestImprovedPrompting.test_create_structured_prompt_function_exists ______
+tests/test_improved_prompting.py:19: in test_create_structured_prompt_function_exists
+    from tinyllama_vlm import create_structured_prompt
+E   ImportError: cannot import name 'create_structured_prompt' from 'tinyllama_vlm' (/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/tinyllama_vlm.py)
+_____ TestImprovedPrompting.test_structured_prompt_has_required_components _____
+tests/test_improved_prompting.py:24: in test_structured_prompt_has_required_components
+    from tinyllama_vlm import create_structured_prompt
+E   ImportError: cannot import name 'create_structured_prompt' from 'tinyllama_vlm' (/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/tinyllama_vlm.py)
+_________ TestImprovedPrompting.test_structured_prompt_has_constraints _________
+tests/test_improved_prompting.py:36: in test_structured_prompt_has_constraints
+    from tinyllama_vlm import create_structured_prompt
+E   ImportError: cannot import name 'create_structured_prompt' from 'tinyllama_vlm' (/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/tinyllama_vlm.py)
+_________ TestImprovedPrompting.test_structured_prompt_returns_string __________
+tests/test_improved_prompting.py:46: in test_structured_prompt_returns_string
+    from tinyllama_vlm import create_structured_prompt
+E   ImportError: cannot import name 'create_structured_prompt' from 'tinyllama_vlm' (/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/tinyllama_vlm.py)
+________ TestImprovedPrompting.test_tinyllama_vlm_can_use_custom_prompt ________
+tests/test_improved_prompting.py:54: in test_tinyllama_vlm_can_use_custom_prompt
+    from tinyllama_vlm import TinyLlamaVLM, create_structured_prompt
+E   ImportError: cannot import name 'create_structured_prompt' from 'tinyllama_vlm' (/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/tinyllama_vlm.py)
+____ TestImprovedPrompting.test_structured_prompt_is_different_from_default ____
+tests/test_improved_prompting.py:67: in test_structured_prompt_is_different_from_default
+    from tinyllama_vlm import create_structured_prompt
+E   ImportError: cannot import name 'create_structured_prompt' from 'tinyllama_vlm' (/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/tinyllama_vlm.py)
+__ TestImprovedPrompting.test_structured_prompt_has_examples_or_instructions ___
+tests/test_improved_prompting.py:77: in test_structured_prompt_has_examples_or_instructions
+    from tinyllama_vlm import create_structured_prompt
+E   ImportError: cannot import name 'create_structured_prompt' from 'tinyllama_vlm' (/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/tinyllama_vlm.py)
+=========================== short test summary info ============================
+FAILED tests/test_improved_prompting.py::TestImprovedPrompting::test_create_structured_prompt_function_exists
+FAILED tests/test_improved_prompting.py::TestImprovedPrompting::test_structured_prompt_has_required_components
+FAILED tests/test_improved_prompting.py::TestImprovedPrompting::test_structured_prompt_has_constraints
+FAILED tests/test_improved_prompting.py::TestImprovedPrompting::test_structured_prompt_returns_string
+FAILED tests/test_improved_prompting.py::TestImprovedPrompting::test_tinyllama_vlm_can_use_custom_prompt
+FAILED tests/test_improved_prompting.py::TestImprovedPrompting::test_structured_prompt_is_different_from_default
+FAILED tests/test_improved_prompting.py::TestImprovedPrompting::test_structured_prompt_has_examples_or_instructions
+============================== 7 failed in 3.77s ===============================
