@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 10 items
+
+tests/test_enhanced_metrics.py FFFFFFFFFF                                [100%]
+
+=================================== FAILURES ===================================
+________ TestEnhancedMetrics.test_calculate_bleu_score_function_exists _________
+tests/test_enhanced_metrics.py:19: in test_calculate_bleu_score_function_exists
+    from enhanced_metrics import calculate_bleu_score
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+_________ TestEnhancedMetrics.test_calculate_bleu_score_returns_float __________
+tests/test_enhanced_metrics.py:24: in test_calculate_bleu_score_returns_float
+    from enhanced_metrics import calculate_bleu_score
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+__________ TestEnhancedMetrics.test_calculate_rouge_l_function_exists __________
+tests/test_enhanced_metrics.py:35: in test_calculate_rouge_l_function_exists
+    from enhanced_metrics import calculate_rouge_l
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+___________ TestEnhancedMetrics.test_calculate_rouge_l_returns_float ___________
+tests/test_enhanced_metrics.py:40: in test_calculate_rouge_l_returns_float
+    from enhanced_metrics import calculate_rouge_l
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+____ TestEnhancedMetrics.test_calculate_semantic_similarity_function_exists ____
+tests/test_enhanced_metrics.py:51: in test_calculate_semantic_similarity_function_exists
+    from enhanced_metrics import calculate_semantic_similarity
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+_____ TestEnhancedMetrics.test_calculate_semantic_similarity_returns_float _____
+tests/test_enhanced_metrics.py:56: in test_calculate_semantic_similarity_returns_float
+    from enhanced_metrics import calculate_semantic_similarity
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+______ TestEnhancedMetrics.test_semantic_similarity_high_for_similar_text ______
+tests/test_enhanced_metrics.py:67: in test_semantic_similarity_high_for_similar_text
+    from enhanced_metrics import calculate_semantic_similarity
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+________ TestEnhancedMetrics.test_evaluate_all_metrics_function_exists _________
+tests/test_enhanced_metrics.py:77: in test_evaluate_all_metrics_function_exists
+    from enhanced_metrics import evaluate_all_metrics
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+__________ TestEnhancedMetrics.test_evaluate_all_metrics_returns_dict __________
+tests/test_enhanced_metrics.py:82: in test_evaluate_all_metrics_returns_dict
+    from enhanced_metrics import evaluate_all_metrics
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
+________________ TestEnhancedMetrics.test_perfect_match_scores _________________
+tests/test_enhanced_metrics.py:96: in test_perfect_match_scores
+    from enhanced_metrics import evaluate_all_metrics
+E   ModuleNotFoundError: No module named 'enhanced_metrics'
