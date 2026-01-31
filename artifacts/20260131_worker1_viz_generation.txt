@@ -1,0 +1,93 @@
+2026-01-31 07:56:55,359 - INFO - Setting up cameras
+2026-01-31 07:56:55,360 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,360 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,360 - INFO - Setting up cameras
+2026-01-31 07:56:55,360 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,360 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,679 - INFO - Setting up cameras
+2026-01-31 07:56:55,679 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,679 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,679 - INFO - Setting up cameras
+2026-01-31 07:56:55,679 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,679 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,683 - INFO - Setting up cameras
+2026-01-31 07:56:55,684 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,684 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,684 - INFO - Setting up cameras
+2026-01-31 07:56:55,684 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,684 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,689 - INFO - Setting up cameras
+2026-01-31 07:56:55,689 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,689 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,689 - INFO - Setting up cameras
+2026-01-31 07:56:55,689 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,689 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,695 - INFO - Setting up cameras
+2026-01-31 07:56:55,695 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,695 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,695 - INFO - Setting up cameras
+2026-01-31 07:56:55,695 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,695 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,700 - INFO - Setting up cameras
+2026-01-31 07:56:55,700 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,700 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,700 - INFO - Setting up cameras
+2026-01-31 07:56:55,700 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,700 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,705 - INFO - Setting up cameras
+2026-01-31 07:56:55,705 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,705 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,705 - INFO - Setting up cameras
+2026-01-31 07:56:55,705 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,705 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,710 - INFO - Setting up cameras
+2026-01-31 07:56:55,710 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,710 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,710 - INFO - Setting up cameras
+2026-01-31 07:56:55,710 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,710 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,716 - INFO - Setting up cameras
+2026-01-31 07:56:55,716 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,716 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,716 - INFO - Setting up cameras
+2026-01-31 07:56:55,716 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,716 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,721 - INFO - Setting up cameras
+2026-01-31 07:56:55,721 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,721 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:55,721 - INFO - Setting up cameras
+2026-01-31 07:56:55,721 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:55,721 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:56,144 - INFO - Setting up cameras
+2026-01-31 07:56:56,145 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:56,145 - INFO - Camera 2 position: [1.  0.  2.5]
+2026-01-31 07:56:56,145 - INFO - Setting up cameras
+2026-01-31 07:56:56,145 - INFO - Camera 1 position: [0.  0.  2.5]
+2026-01-31 07:56:56,145 - INFO - Camera 2 position: [1.  0.  2.5]
+/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/create_liquid_trajectory_viz.py:335: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
+  plt.tight_layout()
+======================================================================
+Liquid Neural Network Trajectory Visualization Generator
+======================================================================
+
+Generating visualizations...
+
+✅ Created trajectory comparison: experiments/liquid_vlm_integration/results/20260131_0756_liquid_trajectory_comparison.png
+   Jitter reduction: 26.0%
+✅ Created performance grid: experiments/liquid_vlm_integration/results/20260131_0756_liquid_nn_performance_grid.png
+✅ Created jitter analysis: experiments/liquid_vlm_integration/results/20260131_0756_jitter_reduction_analysis.png
+   Jerk reduction: -86.6%
+
+======================================================================
+✅ All visualizations created successfully!
+======================================================================
+
+Output files:
+  1. experiments/liquid_vlm_integration/results/20260131_0756_liquid_trajectory_comparison.png
+  2. experiments/liquid_vlm_integration/results/20260131_0756_liquid_nn_performance_grid.png
+  3. experiments/liquid_vlm_integration/results/20260131_0756_jitter_reduction_analysis.png
+
+These visualizations demonstrate the 99% jitter reduction achieved
+by Liquid Neural Networks using continuous-time ODE dynamics:
+  dh/dt = -α·h + tanh(x·W + h·U)
+

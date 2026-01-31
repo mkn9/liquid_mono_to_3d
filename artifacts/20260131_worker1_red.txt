@@ -1,0 +1,72 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 9 items
+
+tests/test_liquid_trajectory_viz.py .FF.F.FF.                            [100%]
+
+=================================== FAILURES ===================================
+_ TestLiquidTrajectoryVisualization.test_create_trajectory_comparison_returns_path _
+tests/test_liquid_trajectory_viz.py:28: in test_create_trajectory_comparison_returns_path
+    output_path = create_trajectory_comparison()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:118: in create_trajectory_comparison
+    noisy_3d, _ = generate_test_trajectory_with_noise()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:86: in generate_test_trajectory_with_noise
+    P1, P2 = set_up_cameras()
+    ^^^^^^
+E   ValueError: too many values to unpack (expected 2)
+_ TestLiquidTrajectoryVisualization.test_create_trajectory_comparison_has_correct_naming _
+tests/test_liquid_trajectory_viz.py:36: in test_create_trajectory_comparison_has_correct_naming
+    output_path = create_trajectory_comparison()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:118: in create_trajectory_comparison
+    noisy_3d, _ = generate_test_trajectory_with_noise()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:86: in generate_test_trajectory_with_noise
+    P1, P2 = set_up_cameras()
+    ^^^^^^
+E   ValueError: too many values to unpack (expected 2)
+__ TestLiquidTrajectoryVisualization.test_create_trajectory_grid_returns_path __
+tests/test_liquid_trajectory_viz.py:51: in test_create_trajectory_grid_returns_path
+    output_path = create_trajectory_grid(num_samples=4)  # Small number for testing
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:219: in create_trajectory_grid
+    noisy_3d, _ = generate_test_trajectory_with_noise()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:86: in generate_test_trajectory_with_noise
+    P1, P2 = set_up_cameras()
+    ^^^^^^
+E   ValueError: too many values to unpack (expected 2)
+__ TestLiquidTrajectoryVisualization.test_create_jitter_analysis_returns_path __
+tests/test_liquid_trajectory_viz.py:64: in test_create_jitter_analysis_returns_path
+    output_path = create_jitter_analysis()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:264: in create_jitter_analysis
+    noisy_3d, _ = generate_test_trajectory_with_noise()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:86: in generate_test_trajectory_with_noise
+    P1, P2 = set_up_cameras()
+    ^^^^^^
+E   ValueError: too many values to unpack (expected 2)
+_ TestLiquidTrajectoryVisualization.test_visualizations_save_to_correct_directory _
+tests/test_liquid_trajectory_viz.py:72: in test_visualizations_save_to_correct_directory
+    output_path = create_trajectory_comparison()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:118: in create_trajectory_comparison
+    noisy_3d, _ = generate_test_trajectory_with_noise()
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+create_liquid_trajectory_viz.py:86: in generate_test_trajectory_with_noise
+    P1, P2 = set_up_cameras()
+    ^^^^^^
+E   ValueError: too many values to unpack (expected 2)
+=========================== short test summary info ============================
+FAILED tests/test_liquid_trajectory_viz.py::TestLiquidTrajectoryVisualization::test_create_trajectory_comparison_returns_path
+FAILED tests/test_liquid_trajectory_viz.py::TestLiquidTrajectoryVisualization::test_create_trajectory_comparison_has_correct_naming
+FAILED tests/test_liquid_trajectory_viz.py::TestLiquidTrajectoryVisualization::test_create_trajectory_grid_returns_path
+FAILED tests/test_liquid_trajectory_viz.py::TestLiquidTrajectoryVisualization::test_create_jitter_analysis_returns_path
+FAILED tests/test_liquid_trajectory_viz.py::TestLiquidTrajectoryVisualization::test_visualizations_save_to_correct_directory
+========================= 5 failed, 4 passed in 1.15s ==========================
