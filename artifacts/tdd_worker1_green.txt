@@ -1,0 +1,74 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 9 items
+
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py FFFFFFF [ 77%]
+F.                                                                       [100%]
+
+=================================== FAILURES ===================================
+______________ TestTrueE2EVisualPipeline.test_e2e_pipeline_exists ______________
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:26: in test_e2e_pipeline_exists
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration import true_e2e_visual_evaluation
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+_ TestTrueE2EVisualPipeline.test_evaluate_without_ground_truth_function_exists _
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:31: in test_evaluate_without_ground_truth_function_exists
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration.true_e2e_visual_evaluation import evaluate_from_embeddings
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+___________ TestTrueE2EVisualPipeline.test_fused_embeddings_are_used ___________
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:44: in test_fused_embeddings_are_used
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration.true_e2e_visual_evaluation import evaluate_from_embeddings
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+_____ TestTrueE2EVisualPipeline.test_ground_truth_only_used_for_comparison _____
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:61: in test_ground_truth_only_used_for_comparison
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration.true_e2e_visual_evaluation import (
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+______ TestTrueE2EVisualPipeline.test_ablation_random_vs_real_embeddings _______
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:85: in test_ablation_random_vs_real_embeddings
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration.true_e2e_visual_evaluation import (
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+_______ TestTrueE2EVisualPipeline.test_no_ground_truth_leakage_in_prompt _______
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:116: in test_no_ground_truth_leakage_in_prompt
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration.true_e2e_visual_evaluation import (
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+________ TestTrueE2EVisualPipeline.test_embedding_statistics_extraction ________
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:137: in test_embedding_statistics_extraction
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration.true_e2e_visual_evaluation import (
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+___________ TestTrueE2EVisualPipeline.test_full_pipeline_integration ___________
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py:158: in test_full_pipeline_integration
+    from liquid_mono_to_3d.experiments.liquid_vlm_integration.true_e2e_visual_evaluation import (
+E   ModuleNotFoundError: No module named 'liquid_mono_to_3d'
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_e2e_pipeline_exists
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_evaluate_without_ground_truth_function_exists
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_fused_embeddings_are_used
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_ground_truth_only_used_for_comparison
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_ablation_random_vs_real_embeddings
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_no_ground_truth_leakage_in_prompt
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_embedding_statistics_extraction
+FAILED experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py::TestTrueE2EVisualPipeline::test_full_pipeline_integration
+========================= 8 failed, 1 passed in 1.38s ==========================
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 9 items / 4 deselected / 5 selected
+
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py .....   [100%]
+
+======================= 5 passed, 4 deselected in 0.97s ========================
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 9 items
+
+experiments/liquid_vlm_integration/tests/test_true_e2e_visual.py ....... [ 77%]
+..                                                                       [100%]
+
+============================== 9 passed in 32.12s ==============================
