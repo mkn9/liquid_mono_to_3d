@@ -1,0 +1,52 @@
+/Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d/experiments/liquid_vlm_integration/component_diagnostics.py:233: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+  plt.tight_layout()
+======================================================================
+Component Diagnostics: Signal Preservation Analysis
+======================================================================
+
+======================================================================
+PIPELINE COMPONENT DIAGNOSTICS
+======================================================================
+
+📊 Stage 1: Video → MagVIT (512-dim)
+  Preservation score: 22.722
+  SNR ratio: 66.425
+  Entropy ratio: 1.649
+
+📊 Stage 2: MagVIT (512-dim) → Liquid Fusion (4096-dim)
+  Preservation score: 0.970
+  SNR ratio: 0.424
+  Entropy ratio: 0.946
+
+📊 Stage 3: Liquid (4096-dim) → Statistics (5 values)
+  Preservation score: 3245.171
+  SNR ratio: 9735.370
+  Entropy ratio: 0.135
+  ⚠️  EXTREME COMPRESSION: 4096 → 5 values
+
+======================================================================
+OVERALL PIPELINE ANALYSIS
+======================================================================
+Cumulative preservation: 71502.093
+
+Stage-by-stage breakdown:
+  1. Video → MagVIT:    22.722
+  2. MagVIT → Liquid:   0.970
+  3. Liquid → Stats:    3245.171
+  Cumulative:           71502.093
+
+🔍 BOTTLENECK IDENTIFIED: MagVIT → Liquid
+   Preservation score: 0.970
+======================================================================
+
+======================================================================
+RECOMMENDATIONS
+======================================================================
+✅ All stages have reasonable preservation (>0.5)
+   Problem may be in LLM decoding, not pipeline
+======================================================================
+💾 Results saved to: experiments/liquid_vlm_integration/results/20260201_0836_component_diagnostics.json
+
+📊 Diagnostic visualization saved: experiments/liquid_vlm_integration/results/20260201_0836_component_diagnostics.png
+
+✅ Component diagnostics complete
