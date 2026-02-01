@@ -1,0 +1,71 @@
+{
+  "stage1_video_to_magvit": {
+    "snr_ratio": 66.42492516684027,
+    "entropy_ratio": 1.6485384290755252,
+    "diversity_ratio": 0.09171195000201744,
+    "input_quality": {
+      "snr_db": 3.6240339795767795e-06,
+      "entropy": 9.641998899138226,
+      "diversity": 1462.7545166015625,
+      "dynamic_range": 10.642269134521484,
+      "mean": 0.0006848578341305256,
+      "std": 1.0017790794372559
+    },
+    "output_quality": {
+      "snr_db": 0.0002407328283879906,
+      "entropy": 15.895205718498127,
+      "diversity": 134.15206909179688,
+      "dynamic_range": 6.301741600036621,
+      "mean": 0.007533758878707886,
+      "std": 1.0106693506240845
+    },
+    "overall_preservation": 22.721725181972605
+  },
+  "stage2_magvit_to_liquid": {
+    "snr_ratio": 0.42366249677135953,
+    "entropy_ratio": 0.9459981528599389,
+    "diversity_ratio": 1.539455560243126,
+    "input_quality": {
+      "snr_db": 0.0002407328283879906,
+      "entropy": 15.895205718498127,
+      "diversity": 134.15206909179688,
+      "dynamic_range": 6.301741600036621,
+      "mean": 0.007533758878707886,
+      "std": 1.0106693506240845
+    },
+    "output_quality": {
+      "snr_db": 0.00010198951349593699,
+      "entropy": 15.036835249122566,
+      "diversity": 206.52114868164062,
+      "dynamic_range": 6.867866039276123,
+      "mean": 0.0049377866089344025,
+      "std": 1.0197573900222778
+    },
+    "overall_preservation": 0.9697054032914748
+  },
+  "stage3_liquid_to_stats": {
+    "snr_ratio": 9735.370063724871,
+    "entropy_ratio": 0.1345126725594264,
+    "diversity_ratio": 0.009553837760448792,
+    "input_quality": {
+      "snr_db": 0.00010198951349593699,
+      "entropy": 15.036835249122566,
+      "diversity": 206.52114868164062,
+      "dynamic_range": 6.867866039276123,
+      "mean": 0.0049377866089344025,
+      "std": 1.0197573900222778
+    },
+    "output_quality": {
+      "snr_db": 0.9929066300392151,
+      "entropy": 2.022644896208716,
+      "diversity": 1.9730695486068726,
+      "dynamic_range": 68.76146697998047,
+      "mean": 13.233087539672852,
+      "std": 26.10980224609375
+    },
+    "overall_preservation": 3245.1713767450638
+  },
+  "cumulative_preservation": 71502.0930739413,
+  "bottleneck_stage": "MagVIT \u2192 Liquid",
+  "bottleneck_score": 0.9697054032914748
+}
