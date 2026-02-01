@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 11 items
+
+experiments/liquid_vlm_integration/tests/test_full_embeddings.py ....... [ 63%]
+....                                                                     [100%]
+
+============================= 11 passed in 25.64s ==============================
