@@ -1,0 +1,70 @@
+======================================================================
+ABLATION STUDY: Measuring True Visual Understanding
+======================================================================
+
+Purpose: Determine if visual embeddings actually contribute to accuracy
+Method: Compare 3 conditions with same LLM (GPT-4)
+
+Device: cpu
+
+📦 Creating sample data...
+✅ 10 samples created
+
+======================================================================
+CONDITION 1: Cheating Baseline (Ground Truth → LLM)
+======================================================================
+Task: Text-to-text conversion of numbers to sentences
+Expected accuracy: ~75% (from previous evaluation)
+
+======================================================================
+CONDITION 2: Random Embeddings (Control)
+======================================================================
+Task: LLM tries to understand random noise
+Expected accuracy: ~25% (random chance)
+  Sample 0: 50.0%
+  Sample 1: 50.0%
+  Sample 2: 75.0%
+  Sample 3: 50.0%
+  Sample 4: 50.0%
+  Sample 5: 50.0%
+  Sample 6: 50.0%
+  Sample 7: 50.0%
+  Sample 8: 50.0%
+  Sample 9: 50.0%
+
+======================================================================
+CONDITION 3: Real Embeddings (True Visual)
+======================================================================
+Task: LLM understands visual-spatial embeddings
+Expected accuracy: 40-60% (challenging)
+  Sample 0: 50.0%
+  Sample 1: 50.0%
+  Sample 2: 50.0%
+  Sample 3: 75.0%
+  Sample 4: 50.0%
+  Sample 5: 50.0%
+  Sample 6: 50.0%
+  Sample 7: 50.0%
+  Sample 8: 50.0%
+  Sample 9: 50.0%
+
+======================================================================
+RESULTS SUMMARY
+======================================================================
+Cheating Baseline (Ground Truth → LLM):  75.0%
+Random Embeddings (Control):             52.5%
+Real Embeddings (Visual):                52.5%
+
+Improvement over random:  +0.0%
+Gap vs cheating baseline: -22.5%
+======================================================================
+
+INTERPRETATION:
+❌ Visual embeddings NOT helping
+   Pipeline may have issues - investigate Liquid fusion
+
+💾 Results saved: experiments/liquid_vlm_integration/results/20260131_2043_ablation_study.json
+
+📊 Visualization saved: experiments/liquid_vlm_integration/results/20260131_2043_ablation_comparison.png
+
+✅ Ablation study complete!
