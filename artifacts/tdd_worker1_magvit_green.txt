@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.13.1, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/mike/Dropbox/Documents/Machine_Learning/LLM_and_Multimodal_Models/repos/liquid_mono_to_3d/liquid_mono_to_3d
+configfile: pytest.ini
+plugins: mock-3.15.0, anyio-4.8.0, cov-7.0.0
+collected 10 items
+
+experiments/liquid_vlm_integration/tests/test_magvit_isolation.py ...F.. [ 60%]
+....                                                                     [100%]
+
+=================================== FAILURES ===================================
+____________ TestMagVITIsolation.test_magvit_bypasses_liquid_fusion ____________
+experiments/liquid_vlm_integration/tests/test_magvit_isolation.py:58: in test_magvit_bypasses_liquid_fusion
+    assert 'Liquid' not in source
+E   AssertionError: assert 'Liquid' not in 'def extract...n features\n'
+E     
+E     'Liquid' is contained here:
+E       s WITHOUT Liquid fusion.
+E     ?           ++++++
+E           
+E           NOTE: This is a MOCK implementation. In production, replace with:
+E               from magvit_model import MagVITFeatureExtractor...
+E     
+E     ...Full output truncated (25 lines hidden), use '-vv' to show
+=========================== short test summary info ============================
+FAILED experiments/liquid_vlm_integration/tests/test_magvit_isolation.py::TestMagVITIsolation::test_magvit_bypasses_liquid_fusion
+========================= 1 failed, 9 passed in 23.66s =========================
